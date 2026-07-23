@@ -19,18 +19,18 @@ Open Jukebox and you land on the main menu with five ways to listen:
 | **🔎 Search** | Type a station name on the on-screen keyboard to find it. |
 | **❤️ Favorites** | Your saved stations, kept between sessions. |
 | **📁 Local Files** | Your own music from a USB drive, browsable by album and artist. |
-| **🎵 Now Playing** | The current track with a spinning record, codec/bitrate, and a live analyzer. |
+| **🎵 Now Playing** | The current track with its **album art** (or a spinning record when there's none), codec/bitrate, and a live analyzer. |
 
 Pick a station or track and it starts playing. Playback keeps going in the
 background while you browse other screens, so hunting for the next song never
 cuts the music. In any list, a name too long to fit **scrolls** while it's
 highlighted, so the full title is always readable.
 
-On **Now Playing**, the record spins while audio plays and stops when paused, the
-spectrum bars react to the sound in real time, and `←/→` skip to the previous or
-next item from wherever you started listening. When a local track finishes, the
-**next one plays automatically** — and with **shuffle** on, the queue plays in a
-random order.
+On **Now Playing**, a local track shows its **album cover** in a framed square; if
+there's no art, a vinyl record spins instead (and stops when paused). The spectrum
+bars react to the sound in real time, and `←/→` skip to the previous or next item
+from wherever you started listening. When a local track finishes, the **next one
+plays automatically** — and with **shuffle** on, the queue plays in a random order.
 
 ---
 
@@ -62,7 +62,13 @@ USB DRIVE (root)
 **Shuffle** toggle. Pick Albums to see every album (with its artist and track
 count), open one, and play a track — `←/→` on Now Playing then steps through that
 album, and when it ends the next track starts on its own. Artists drills in the
-same way. Each album/artist shows a colored initial tile in place of cover art.
+same way. In the lists, each album/artist shows a colored initial tile; the full
+**album cover** appears on Now Playing.
+
+**Album art:** Now Playing shows the cover for the playing track, from either a
+cover image in the album folder (`cover.jpg`, `folder.jpg`, or `front.jpg` /
+`.png`) or a picture embedded in the file's tags (MP3 `APIC`, FLAC `PICTURE`).
+No art? The spinning record shows instead.
 
 **Shuffle:** turn it on from the **Shuffle** row (it shows ON/OFF) or with the
 **shoulder buttons** on Now Playing. It's a mode — once on, whatever you play
@@ -105,5 +111,5 @@ the drive's root, and holds files of the types above. A large library shows
   another.
 - Auto-advance and shuffle apply to **local files only** — radio streams are
   continuous, so there's nothing to advance to.
-- The small version number at the bottom of the main menu (e.g. `v1.0.8`) bumps
+- The small version number at the bottom of the main menu (e.g. `v1.0.9`) bumps
   with every build, so you can tell which version is on the device.
