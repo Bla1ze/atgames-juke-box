@@ -28,7 +28,9 @@ highlighted, so the full title is always readable.
 
 On **Now Playing**, the record spins while audio plays and stops when paused, the
 spectrum bars react to the sound in real time, and `←/→` skip to the previous or
-next item from wherever you started listening.
+next item from wherever you started listening. When a local track finishes, the
+**next one plays automatically** — and with **shuffle** on, the queue plays in a
+random order.
 
 ---
 
@@ -56,11 +58,16 @@ USB DRIVE (root)
             └── 01 Migration.flac
 ```
 
-**Browsing:** Local Files opens to **Albums**, **Artists**, or **All Tracks**.
-Pick Albums to see every album (with its artist and track count), open one, and
-play a track — `←/→` on Now Playing then steps through that album. Artists drills
-in the same way. Each album/artist shows a colored initial tile in place of cover
-art.
+**Browsing:** Local Files opens to **Albums**, **Artists**, **All Tracks**, or a
+**Shuffle** toggle. Pick Albums to see every album (with its artist and track
+count), open one, and play a track — `←/→` on Now Playing then steps through that
+album, and when it ends the next track starts on its own. Artists drills in the
+same way. Each album/artist shows a colored initial tile in place of cover art.
+
+**Shuffle:** turn it on from the **Shuffle** row (it shows ON/OFF) or with the
+**shoulder buttons** on Now Playing. It's a mode — once on, whatever you play
+(an album or All Tracks) runs in random order until you turn it off, and Now
+Playing shows **SHUFFLE ON**.
 
 **Where the album/artist names come from:** Jukebox reads the embedded tags —
 **ID3v2** in MP3s and **Vorbis comments** in FLAC/OGG (title, artist, album, track
@@ -85,8 +92,8 @@ the drive's root, and holds files of the types above. A large library shows
 | **Radio** | `Arrows` select · `Start` open / play · `Y` favorite · `Back` up a level |
 | **Search** | `Arrows` move · `Start` press key · `Back` to menu — then `Start` play, `Y` favorite on results |
 | **Favorites** | `Arrows` select · `Start` play · `Y` remove · `Back` to menu |
-| **Local Files** | `Arrows` select · `Start` open a list / play a track · `Back` up a level (or to menu at the top) |
-| **Now Playing** | `←/→` previous / next · `Start` pause · `Y` favorite · `Back` to menu |
+| **Local Files** | `Arrows` select · `Start` open a list / play a track / toggle Shuffle · `Back` up a level (or to menu at the top) |
+| **Now Playing** | `←/→` previous / next · `Start` pause · `L/R shoulder` shuffle · `Y` favorite · `Back` to menu |
 
 ---
 
@@ -96,5 +103,7 @@ the drive's root, and holds files of the types above. A large library shows
 - Favorites are saved on the device and survive restarts.
 - Radio stations come and go — if one won't play, it may simply be offline; try
   another.
-- The small version number at the bottom of the main menu (e.g. `v1.0.4`) bumps
+- Auto-advance and shuffle apply to **local files only** — radio streams are
+  continuous, so there's nothing to advance to.
+- The small version number at the bottom of the main menu (e.g. `v1.0.8`) bumps
   with every build, so you can tell which version is on the device.
