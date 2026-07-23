@@ -1,8 +1,8 @@
 <root>
     <name>Jukebox</name>
-    <developer>AtGames SDK</developer>
+    <developer>Bla1ze</developer>
     <category>Media</category>
     <year>2026</year>
-    <copyright>Copyright 2026 AtGames Cloud Holdings</copyright>
+    <copyright>Bla1ze</copyright>
     <description>A music and internet-radio player. Browse popular stations from the online directory or play audio files from a /music folder on the USB drive. Decodes with the device's own ffmpeg, so it plays MP3, AAC, FLAC, OGG and more.</description>
 </root>
