@@ -90,6 +90,22 @@ the drive's root, and holds files of the types above. A large library shows
 
 ---
 
+## On the backglass and DMD
+
+On cabinets with secondary panels (Legends Pinball, 4KP), Jukebox lights them up
+too:
+
+- The **backglass** shows the current album cover big — the crisp cover framed
+  over a soft, blurred wash of itself, with the track title and artist beneath.
+  On radio it shows the station name.
+- The **DMD** strip becomes a lit **Jukebox marquee** — the logo on a neon
+  gradient, with the track title (or station name) captioned below it.
+
+It updates only when the track changes, so it never affects playback or the
+spectrum analyzer. Cabinets without extra panels simply ignore it.
+
+---
+
 ## Controls
 
 | Screen | Buttons |
