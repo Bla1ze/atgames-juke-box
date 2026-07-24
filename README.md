@@ -92,8 +92,7 @@ the drive's root, and holds files of the types above. A large library shows
 
 ## On the backglass and DMD
 
-On cabinets with secondary panels (Legends Pinball, 4KP), Jukebox lights them up
-too:
+Jukebox lights them up too:
 
 - The **backglass** shows the current album cover big — the crisp cover framed
   over a soft, blurred wash of itself, with the track title and artist beneath.
