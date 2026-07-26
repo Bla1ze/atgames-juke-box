@@ -1,5 +1,10 @@
 # 🎛️ Jukebox
 
+<img width="1080" height="1920" alt="Jukebox-1" src="https://github.com/user-attachments/assets/d2f6e188-9c41-4e62-b0fc-3b464a2cb561" />
+<img width="1080" height="1920" alt="jukebox-3" src="https://github.com/user-attachments/assets/25fa86b8-b0f6-404f-8842-5cac7cfe2fa0" />
+<img width="1080" height="1920" alt="Jukebox-2" src="https://github.com/user-attachments/assets/50e4aa71-921e-4550-b02d-1a82d1c5b16e" />
+
+
 A music and internet-radio player for AtGames devices. Browse thousands of online
 radio stations, search by name, save your favorites, or play audio files from a
 USB drive — with a spinning-vinyl **Now Playing** screen and a live spectrum
