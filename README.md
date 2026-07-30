@@ -133,3 +133,8 @@ spectrum analyzer. Cabinets without extra panels simply ignore it.
   continuous, so there's nothing to advance to.
 - The small version number at the bottom of the main menu (e.g. `v1.0.9`) bumps
   with every build, so you can tell which version is on the device.
+
+## 🙏 Credits
+
+- Fonts: **Noto Sans** & **Bebas Neue** (SIL Open Font License).
+- Display info: @n-i-x
