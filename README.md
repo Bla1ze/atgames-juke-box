@@ -163,7 +163,7 @@ The bottom of every screen shows the buttons that work there.
 | **Search** | `Arrows` move · `Start` press key · `Back` to menu — then `Start` play, `Y` favorite on results |
 | **Favorites** | `Arrows` select · `Start` play · `Y` remove · `Back` to menu |
 | **My Music** | `Arrows` select · `Start` open a list / play a track / toggle Shuffle · `Back` up a level (or to menu at the top) |
-| **Now Playing** | `←/→` previous / next · `Start` pause · `L/R shoulder` shuffle · `Y` favorite (radio) · `Back` to menu |
+| **Now Playing** | `←/→` previous / next · `Start` pause · `L/R shoulder` shuffle · `Y` favorite (radio) · `Back` to My Music's view list (if you started there) or the menu |
 
 ---
 
