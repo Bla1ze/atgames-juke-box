@@ -1,8 +1,10 @@
 # 🎛️ Jukebox
 
-<img width="1080" height="1920" alt="Jukebox-1" src="https://github.com/user-attachments/assets/d2f6e188-9c41-4e62-b0fc-3b464a2cb561" />
-<img width="1080" height="1920" alt="jukebox-3" src="https://github.com/user-attachments/assets/25fa86b8-b0f6-404f-8842-5cac7cfe2fa0" />
-<img width="1080" height="1920" alt="Jukebox-2" src="https://github.com/user-attachments/assets/50e4aa71-921e-4550-b02d-1a82d1c5b16e" />
+<p align="center">
+  <img src="screenshots/main-menu.png" width="280" alt="Main menu with the Now Playing card and Radio, Search, Favorites and My Music tiles" />
+  <img src="screenshots/now-playing.png" width="280" alt="Now Playing with album art, progress bar and spectrum" />
+  <img src="screenshots/radio-browse.png" width="280" alt="Radio category list with the mini player" />
+</p>
 
 
 A music and internet-radio player for AtGames devices. Browse thousands of online
