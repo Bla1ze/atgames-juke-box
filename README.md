@@ -16,7 +16,20 @@ Plays MP3, AAC, FLAC, OGG, Opus, WAV, and WMA.
 
 ---
 
-## ✨ New in 2.0
+## ✨ New in 2.1
+
+- **The right thing on every screen.** On the HDP, the menu used to appear on
+  the backglass with the backglass artwork on the playfield. Which physical
+  screen is which varies by cabinet, and Jukebox now reads the model and places
+  all three correctly on both the 4KP and the HDP.
+- **Favorites without the arcade control panel.** Saving a station needed `Y`,
+  which plain cabinets don't have. **A flipper** now saves (or removes) the
+  highlighted station, and favorites the station on Now Playing. `Y` still works
+  if you have the panel.
+
+Full history in [CHANGELOG.md](CHANGELOG.md).
+
+## New in 2.0
 
 - **A redesigned look.** Smooth rounded shapes, soft glows, one consistent type
   scale, and a button legend along the bottom of every screen showing exactly
@@ -117,8 +130,8 @@ artists shows as **Various Artists**.
 No art? A spinning record shows instead. Pictures embedded in M4A/AAC files
 aren't read yet — put a `cover.jpg` in the folder for those.
 
-**Shuffle:** turn it on from the **Shuffle** row (it shows ON/OFF) or with the
-**shoulder buttons** on Now Playing. It's a mode — once on, whatever you play
+**Shuffle:** turn it on from the **Shuffle** row (it shows ON/OFF) or with a
+**flipper** on Now Playing while local music is playing. It's a mode — once on, whatever you play
 (an album, an artist, or All Tracks) runs in random order until you turn it off,
 and Now Playing shows a **SHUFFLE** tag.
 
@@ -148,24 +161,34 @@ Jukebox lights them up too:
 - The **DMD** strip becomes a lit **Jukebox marquee** — the logo on a neon
   gradient, with the track title (or station name) captioned below it.
 
-The panels redraw only when the track changes (plus the scrolling line, when
-there is one), so they never affect playback or the spectrum analyzer. Cabinets
-without extra panels simply ignore them.
+Which physical screen is which differs between cabinet models, so Jukebox reads
+the model to place the playfield, backglass and DMD correctly. The panels redraw
+only when the track changes (plus the scrolling line, when there is one), so
+they never affect playback or the spectrum analyzer. Cabinets without extra
+panels simply ignore them.
+
+**If a screen still shows the wrong thing**, create a file named `jukebox.cfg`
+at the root of the USB stick with `diag = 1` in it. Jukebox then labels each
+panel on screen and writes `jukebox-panels.log` beside the file, which is enough
+to work out what your cabinet is doing. The same file can force the assignment:
+`playfield`, `backglass` and `dmd` each take a connector number from the log.
 
 ---
 
 ## Controls
 
-The bottom of every screen shows the buttons that work there.
+The bottom of every screen shows the buttons that work there. **Flipper** means
+either shoulder button, so nothing needs the arcade control panel — `Y` and `X`
+still work for anyone who has one.
 
 | Screen | Buttons |
 | --- | --- |
 | **Menu** | `Arrows` move between the Now Playing card and the tiles · `Start` open · `Back` exit |
-| **Radio** | `Arrows` select · `Start` open / play · `Y` favorite · `Back` up a level |
-| **Search** | `Arrows` move · `Start` press key · `Back` to menu — then `Start` play, `Y` favorite on results |
-| **Favorites** | `Arrows` select · `Start` play · `Y` remove · `Back` to menu |
+| **Radio** | `Arrows` select · `Start` open / play · `Flipper` favorite · `Back` up a level |
+| **Search** | `Arrows` move · `Start` press key · `Back` to menu — then `Start` play, `Flipper` favorite on results |
+| **Favorites** | `Arrows` select · `Start` play · `Flipper` remove · `Back` to menu |
 | **My Music** | `Arrows` select · `Start` open a list / play a track / toggle Shuffle · `Back` up a level (or to menu at the top) |
-| **Now Playing** | `←/→` previous / next · `Start` pause · `L/R shoulder` shuffle · `Y` favorite (radio) · `Back` to My Music's view list (if you started there) or the menu |
+| **Now Playing** | `←/→` previous / next · `Start` pause · `Flipper` shuffle (local) or favorite (radio) · `Back` to My Music's view list (if you started there) or the menu |
 
 ---
 
