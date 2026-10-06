@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your music - Jukebox</title>
+<meta name="description" content="How to put your own music on a USB drive for Jukebox on AtGames Legends Pinball: folders, file types, album art, tags, albums, artists and shuffle.">
+<link rel="icon" href="assets/jukebox-app.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monoton&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0b0614; --panel: #160c24; --line: #2c1846; --text: #f6efff; --dim: #b9a8d6;
+  --pink: #ff2e93; --hot: #ff5cb0; --gold: #ffc93c; --amber: #ff8a1f; --cyan: #2ee6ff; --violet: #8b3dff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 "Noto Sans", system-ui, sans-serif; }
+a { color: var(--cyan); }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+/* Header: a slim version of the home page hero. */
+.top { position: relative; overflow: hidden; padding: 26px 0 40px; }
+.top::before { content: ""; position: absolute; inset: 0;
+  background: radial-gradient(600px 300px at 85% 10%, rgba(139,61,255,.3), transparent 70%),
+              radial-gradient(500px 260px at 10% 100%, rgba(255,46,147,.18), transparent 70%); }
+.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--pink), var(--cyan), transparent); box-shadow: 0 0 18px var(--pink); }
+.top .wrap { position: relative; }
+.crumbs { font-size: 15px; color: var(--dim); margin-bottom: 26px; display: flex; align-items: center; gap: 10px; }
+.crumbs img { width: 30px; height: 30px; border-radius: 7px; }
+.crumbs a { color: var(--text); text-decoration: none; font-family: "Monoton", cursive; font-size: 20px; color: var(--hot);
+  text-shadow: 0 0 8px rgba(255,46,147,.6); }
+h1 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: clamp(44px, 8vw, 64px); line-height: 1; margin: 0 0 12px; letter-spacing: 1px; }
+h1 span { color: var(--hot); }
+.lead { font-size: 19px; color: var(--dim); margin: 0; max-width: 36em; }
+
+.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 0; padding: 0; list-style: none; }
+.toc a { display: inline-block; padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel);
+  color: var(--dim); text-decoration: none; font-size: 14px; }
+.toc a:hover { color: var(--text); border-color: var(--pink); }
+
+main { padding: 10px 0 40px; }
+h2 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 36px; letter-spacing: 1px; margin: 48px 0 8px; scroll-margin-top: 16px; }
+h2 span { color: var(--hot); }
+h3 { font-size: 18px; margin: 24px 0 6px; }
+p, li { color: #e6dcf7; }
+ul { padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+ol.steps { counter-reset: s; list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 12px; }
+ol.steps li { counter-increment: s; position: relative; padding: 16px 16px 16px 66px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin: 0; }
+ol.steps li::before { content: counter(s); position: absolute; left: 16px; top: 14px; width: 34px; height: 34px; border-radius: 50%;
+  display: grid; place-items: center; font-family: "Bebas Neue", sans-serif; font-size: 21px; color: #241300;
+  background: linear-gradient(180deg, var(--gold), var(--amber)); }
+code { background: #1d1030; border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: 14px; }
+pre { background: #120a20; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; overflow-x: auto; font-size: 14px; line-height: 1.5; color: #e9ddff; }
+pre code { background: none; border: 0; padding: 0; }
+
+table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0; }
+th { text-align: left; color: var(--gold); font-weight: 600; border-bottom: 2px solid var(--line); padding: 10px; }
+td { border-bottom: 1px solid var(--line); padding: 10px; vertical-align: top; color: #e6dcf7; }
+td:first-child { white-space: nowrap; font-weight: 600; color: var(--text); }
+kbd { font-family: "Bebas Neue", sans-serif; font-size: 15px; letter-spacing: 1px; background: #241338; border: 1px solid #4b2a70;
+  border-bottom-width: 3px; border-radius: 6px; padding: 1px 7px; color: var(--gold); }
+
+.note { background: linear-gradient(90deg, rgba(255,201,60,.08), transparent); border-left: 3px solid var(--gold); padding: 14px 18px;
+  border-radius: 6px; color: var(--dim); margin: 16px 0; }
+.note b { color: var(--text); }
+
+.back { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); }
+footer { border-top: 1px solid var(--line); padding: 30px 0 46px; color: var(--dim); font-size: 14px; }
+footer a { color: var(--dim); }
+
+@media (max-width: 640px) {
+  td:first-child { white-space: normal; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="crumbs"><img src="assets/jukebox-app.png" alt=""><a href="./">Jukebox</a> <span>/ Guide</span></div>
+    <h1>Your <span>music</span></h1>
+    <p class="lead">Put your own songs on a USB drive and Jukebox turns them into a library by album and artist, with album art on the backglass.</p>
+    <ul class="toc">
+      <li><a href="#setup">Setting up</a></li>
+      <li><a href="#formats">File types</a></li>
+      <li><a href="#names">Names &amp; tags</a></li>
+      <li><a href="#art">Album art</a></li>
+      <li><a href="#browsing">Browsing</a></li>
+      <li><a href="#shuffle">Shuffle</a></li>
+      <li><a href="#trouble">Troubleshooting</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <h2 id="setup">Setting <span>up</span></h2>
+    <p>Jukebox looks for a folder named <code>music</code> at the <b>root of a USB drive</b>, and scans it and every folder inside it.</p>
+    <ol class="steps">
+      <li>On a computer, open the USB drive.</li>
+      <li>Create a folder named <code>music</code> (all lowercase) at the drive's root, not inside another folder.</li>
+      <li>Copy your music into it. Folders inside are scanned, so an <code>Artist/Album/track</code> layout works great.</li>
+      <li>Eject the drive, plug it into the cabinet, start Jukebox and open <b>My Music</b>.</li>
+    </ol>
+    <pre><code>USB DRIVE (root)
+└── music/
+    ├── Daft Punk/
+    │   └── Discovery/
+    │       ├── cover.jpg
+    │       ├── 01 One More Time.mp3
+    │       └── 02 Aerodynamic.mp3
+    └── Bonobo/
+        └── Migration/
+            └── 01 Migration.flac</code></pre>
+    <p>Any layout works: one big folder of songs, folders by album only, or <code>Artist/Album</code>. Tidy tags matter more than tidy folders (see below).</p>
+
+    <h2 id="formats">File <span>types</span></h2>
+    <table>
+      <tr><th>Format</th><th>Plays</th><th>Names from tags</th><th>Embedded art</th></tr>
+      <tr><td>MP3</td><td>Yes</td><td>Yes (ID3v2)</td><td>Yes</td></tr>
+      <tr><td>FLAC</td><td>Yes</td><td>Yes (Vorbis comments)</td><td>Yes</td></tr>
+      <tr><td>M4A / AAC</td><td>Yes</td><td>No, from folders</td><td>Not yet: use a <code>cover.jpg</code></td></tr>
+      <tr><td>OGG, Opus, WAV, WMA</td><td>Yes</td><td>No, from folders</td><td>No: use a <code>cover.jpg</code></td></tr>
+    </table>
+
+    <h2 id="names">Names <span>&amp; tags</span></h2>
+    <p>For MP3 and FLAC, Jukebox reads the title, artist, album and track number from the file's tags, the same ones a music player or iTunes shows.</p>
+    <p>For other files, or files with no tags, it uses the folders: the file's folder becomes the <b>album</b> and the folder above it the <b>artist</b>, and the file name becomes the title. Anything it can't place goes under <b>Unknown Album</b> / <b>Unknown Artist</b>.</p>
+    <ul>
+      <li>Albums are grouped by name <i>and</i> folder, so two different albums with the same name (say, two <i>Greatest Hits</i>) stay separate.</li>
+      <li>An album split into <code>CD1</code> / <code>CD2</code> or <code>Disc 1</code> / <code>Disc 2</code> folders stays one album.</li>
+      <li>An album with several artists (a compilation or soundtrack) shows as <b>Various Artists</b>, and each artist on it still appears under Artists.</li>
+      <li>Tracks play in track-number order when the tags have them. Starting file names with the number (<code>01 One More Time.mp3</code>) helps files without tags.</li>
+    </ul>
+
+    <h2 id="art">Album <span>art</span></h2>
+    <p>The cover shows on Now Playing, which also takes on the album's colors, and big on the backglass. Jukebox takes the first of these it finds:</p>
+    <ol>
+      <li>an image in the album's folder named <code>cover</code>, <code>folder</code> or <code>front</code> (<code>.jpg</code>, <code>.jpeg</code> or <code>.png</code>, any capitalization);</li>
+      <li>Windows Media Player's <code>AlbumArt…Large.jpg</code>;</li>
+      <li>any other image in the folder;</li>
+      <li>a picture inside an MP3 or FLAC file. When a file has several, the front cover wins.</li>
+    </ol>
+    <p>No art at all? A spinning record shows instead.</p>
+    <p class="note"><b>Tip:</b> M4A/AAC files often have their cover built in, which Jukebox can't read yet. Save the cover as <code>cover.jpg</code> in the album's folder and it will show.</p>
+
+    <h2 id="browsing"><span>Browsing</span></h2>
+    <p><b>My Music</b> opens to four rows:</p>
+    <table>
+      <tr><th>Row</th><th>What it shows</th></tr>
+      <tr><td>Albums</td><td>Every album with its artist and track count. Open one to see its tracks.</td></tr>
+      <tr><td>Artists</td><td>Everyone in your library, including artists who only appear on a compilation. Pick one to see all of their songs from every album.</td></tr>
+      <tr><td>All Tracks</td><td>Every song in the library.</td></tr>
+      <tr><td>Shuffle</td><td>Turns shuffle on or off (it shows ON / OFF).</td></tr>
+    </table>
+    <p>Play a track and the rest of that list follows: <kbd>&larr;/&rarr;</kbd> on Now Playing step through it, and the next track starts on its own when one ends. The music keeps playing while you browse; the mini player at the bottom of each list shows what's on.</p>
+    <table>
+      <tr><th>Button</th><th>In My Music</th></tr>
+      <tr><td><kbd>Arrows</kbd></td><td>Select</td></tr>
+      <tr><td><kbd>Start</kbd></td><td>Open a list, play a track, or toggle Shuffle</td></tr>
+      <tr><td><kbd>Back</kbd></td><td>Up a level (to the menu from the top)</td></tr>
+    </table>
+
+    <h2 id="shuffle"><span>Shuffle</span></h2>
+    <p>Turn it on from the <b>Shuffle</b> row, or press a <kbd>Flipper</kbd> on Now Playing while your music is playing. It's a mode: once it's on, whatever you play (an album, an artist or All Tracks) plays in random order until you turn it off. Now Playing shows a <b>SHUFFLE</b> tag while it's on.</p>
+
+    <h2 id="trouble"><span>Troubleshooting</span></h2>
+    <h3>"No music found"</h3>
+    <ul>
+      <li>The folder must be named exactly <code>music</code>, all lowercase.</li>
+      <li>It must sit at the root of the drive, not inside <code>external</code> or another folder.</li>
+      <li>It must hold files of a type in the <a href="#formats">table above</a>.</li>
+    </ul>
+    <h3>"Scanning library…" for a while</h3>
+    <p>A large library takes a moment the first time My Music opens, while the tags are read.</p>
+    <h3>Songs under Unknown Album or Unknown Artist</h3>
+    <p>Those files have no tags Jukebox can read and sit too high up for the folders to say. Add tags with a music app, or move them into an <code>Artist/Album</code> folder.</p>
+    <h3>One album shows up twice</h3>
+    <p>Its tracks are in two different folders, or the album name in their tags differs slightly. Put them in one folder (or <code>CD1</code> / <code>CD2</code> folders inside it) and make the album tags match.</p>
+    <h3>No album art</h3>
+    <p>Put a <code>cover.jpg</code> in the album's folder. See <a href="#art">Album art</a>.</p>
+
+    <p class="back"><a href="./">&larr; Back to Jukebox</a> &middot; More details in the <a href="https://github.com/Bla1ze/atgames-juke-box#readme">README</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Jukebox is a free fan project by Bla1ze, not affiliated with or endorsed by AtGames.
+    <br><a href="./">Home</a> &middot; <a href="https://github.com/Bla1ze/atgames-juke-box">GitHub</a> &middot;
+    <a href="https://github.com/Bla1ze/atgames-juke-box/releases/latest">Download</a> &middot;
+    <a href="https://github.com/Bla1ze/atgames-juke-box/issues">Report a problem</a>
+  </div>
+</footer>
+
+</body>
+</html>
