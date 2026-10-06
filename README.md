@@ -18,7 +18,19 @@ Plays MP3, AAC, FLAC, OGG, Opus, WAV, and WMA.
 
 ---
 
-## ✨ New in 2.1
+## ✨ New in 2.2
+
+- **Add music over Wi-Fi.** In **My Music**, choose **Add music over Wi-Fi**.
+  The cabinet shows an address and a PIN: open the address in a browser on any
+  computer or phone on the same network and drop in songs, or whole artist and
+  album folders. They go into the drive's `music` folder with their folders
+  kept, and the library updates when you press `Back`.
+- **Updates from inside the app.** When a new version is out, a banner appears
+  under the main menu tiles. Select it to download, install and restart. Your
+  favorites, music, and the app's picture and description are untouched. (2.2
+  is the first version with this, so install 2.2 itself by hand.)
+
+## New in 2.1
 
 - **The right thing on every screen.** On the HDP, the menu used to appear on
   the backglass with the backglass artwork on the playfield. Which physical
@@ -106,8 +118,8 @@ USB DRIVE (root)
             └── 01 Migration.flac
 ```
 
-**Browsing:** My Music opens to **Albums**, **Artists**, **All Tracks**, or a
-**Shuffle** toggle.
+**Browsing:** My Music opens to **Albums**, **Artists**, **All Tracks**, a
+**Shuffle** toggle, and **Add music over Wi-Fi**.
 
 - **Albums** lists every album with its artist and track count. Open one and play
   a track — `←/→` on Now Playing then steps through that album, and when it ends
@@ -145,6 +157,14 @@ artist. Anything it can't place lands under **Unknown Album / Unknown Artist**.
 
 **Supported formats:** `mp3` · `m4a` · `aac` · `flac` · `ogg` · `opus` · `wav` · `wma`
 (tags are read from MP3 and FLAC; the rest still play and group by folder.)
+
+**Over Wi-Fi:** no need to take the drive out. In **My Music**, choose **Add
+music over Wi-Fi** (or press `Start` on the *"No music found"* screen). Jukebox
+shows an address like `http://192.168.1.20:8080` and a 4-digit PIN. Open the
+address in a browser on a computer or phone on the same network, enter the PIN,
+and drop in songs or folders. Folders are kept (up to three levels, like
+`Artist/Album/Disc 1`), cover images come along, and songs already there are
+skipped. Press `Back` on the cabinet when you're done and the library rescans.
 
 Seeing *"No music found"*? Make sure the folder is named exactly `music`, sits at
 the drive's root, and holds files of the types above. A large library shows
@@ -197,6 +217,9 @@ still work for anyone who has one.
 ## Good to know
 
 - **Radio and Search need an internet connection.** My Music works offline.
+- **Updates:** Jukebox checks GitHub for a new version when it starts (quietly;
+  offline is fine). A banner under the main menu tiles offers it; the update
+  replaces only `jukebox-app.elf` and then restarts Jukebox.
 - Favorites are saved on the device and survive restarts — and carry over from
   1.x, so your saved stations are still there after upgrading.
 - Radio stations come and go — if one won't play, it may simply be offline; try

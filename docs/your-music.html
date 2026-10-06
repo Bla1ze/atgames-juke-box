@@ -87,6 +87,7 @@ footer a { color: var(--dim); }
     <p class="lead">Put your own songs on a USB drive and Jukebox turns them into a library by album and artist, with album art on the backglass.</p>
     <ul class="toc">
       <li><a href="#setup">Setting up</a></li>
+      <li><a href="#wifi">Over Wi-Fi</a></li>
       <li><a href="#formats">File types</a></li>
       <li><a href="#names">Names &amp; tags</a></li>
       <li><a href="#art">Album art</a></li>
@@ -120,6 +121,22 @@ footer a { color: var(--dim); }
             └── 01 Migration.flac</code></pre>
     <p>Any layout works: one big folder of songs, folders by album only, or <code>Artist/Album</code>. Tidy tags matter more than tidy folders (see below).</p>
 
+    <h2 id="wifi">Over <span>Wi-Fi</span></h2>
+    <p>No need to take the drive out: send music from any computer or phone on the same network as the cabinet.</p>
+    <ol class="steps">
+      <li>In <b>My Music</b>, choose <b>Add music over Wi-Fi</b> (or press <kbd>Start</kbd> on the "No music found" screen). The cabinet shows an address like <code>http://192.168.1.20:8080</code> and a 4-digit PIN.</li>
+      <li>Open that address in a browser and enter the PIN.</li>
+      <li>Drop songs or whole artist and album folders on the page, or use <b>Choose a folder</b> / <b>Choose files</b>.</li>
+      <li>Press <kbd>Back</kbd> on the cabinet when you're done. The library rescans and the new music shows up.</li>
+    </ol>
+    <ul>
+      <li>Folders are kept, up to three levels (<code>Artist/Album/Disc 1</code>), inside the drive's <code>music</code> folder. Send whole album folders to keep albums together.</li>
+      <li>Cover images (<code>.jpg</code>, <code>.png</code>) come along with the songs. Other files are skipped.</li>
+      <li>Songs already on the drive are skipped.</li>
+      <li>It only runs while that screen is open, with a new PIN each time. Use the port the cabinet shows (8080 is sometimes taken).</li>
+      <li>The music keeps playing while you send.</li>
+    </ul>
+
     <h2 id="formats">File <span>types</span></h2>
     <table>
       <tr><th>Format</th><th>Plays</th><th>Names from tags</th><th>Embedded art</th></tr>
@@ -151,13 +168,14 @@ footer a { color: var(--dim); }
     <p class="note"><b>Tip:</b> M4A/AAC files often have their cover built in, which Jukebox can't read yet. Save the cover as <code>cover.jpg</code> in the album's folder and it will show.</p>
 
     <h2 id="browsing"><span>Browsing</span></h2>
-    <p><b>My Music</b> opens to four rows:</p>
+    <p><b>My Music</b> opens to five rows:</p>
     <table>
       <tr><th>Row</th><th>What it shows</th></tr>
       <tr><td>Albums</td><td>Every album with its artist and track count. Open one to see its tracks.</td></tr>
       <tr><td>Artists</td><td>Everyone in your library, including artists who only appear on a compilation. Pick one to see all of their songs from every album.</td></tr>
       <tr><td>All Tracks</td><td>Every song in the library.</td></tr>
       <tr><td>Shuffle</td><td>Turns shuffle on or off (it shows ON / OFF).</td></tr>
+      <tr><td>Add music over Wi-Fi</td><td>Send music from a browser (<a href="#wifi">see above</a>).</td></tr>
     </table>
     <p>Play a track and the rest of that list follows: <kbd>&larr;/&rarr;</kbd> on Now Playing step through it, and the next track starts on its own when one ends. The music keeps playing while you browse; the mini player at the bottom of each list shows what's on.</p>
     <table>

@@ -1,5 +1,23 @@
 # Changelog
 
+## 2.2 — 6 October 2026
+
+**Add music over Wi-Fi, and updates from inside the app.**
+
+- **Add music over Wi-Fi.** My Music has a new row, *Add music over Wi-Fi*. It
+  shows an address and a PIN; open the address in a browser on any computer or
+  phone on the same network, and drop in songs or whole artist and album
+  folders. They land in the USB drive's `music` folder with their folders kept,
+  and the library updates when you close the screen. With no music yet, START
+  on the "No music found" screen opens it too.
+- **Updates from inside the app.** Jukebox checks for a new version when it
+  starts. When there is one, a banner appears under the main menu tiles: select
+  it to download and install the update, then restart into it. Only the app is
+  replaced; your favorites, your music and the app's picture and description
+  are left as they are. This is the first version with the updater, so 2.2
+  itself is installed by hand.
+- The Favorites tile now says "Save stations with a flipper", matching 2.1.
+
 ## 2.1 — 25 September 2026
 
 **Every screen now shows the right thing, on every cabinet.**
