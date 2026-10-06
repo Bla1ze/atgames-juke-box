@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.1 — 6 October 2026
+
+**A small release to try the new in-app updater.** Nothing else changes from
+2.2. On 2.2, a banner under the main menu tiles offers this version: select it,
+choose Install, then Restart now.
+
 ## 2.2 — 6 October 2026
 
 **Add music over Wi-Fi, and updates from inside the app.**
