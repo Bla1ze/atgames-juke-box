@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.4.1 — 7 October 2026
+
+**YouTube covers now show on the cabinet.** In 2.4 the video's thumbnail never
+replaced the record on Now Playing: the image step used parts of ffmpeg the
+cabinet's copy doesn't have. It now uses only what every ffmpeg has, with
+simpler fallbacks, so there's always a cover.
+
 ## 2.4 — 7 October 2026
 
 **YouTube on the backglass.**
