@@ -281,11 +281,10 @@ only when the track changes (plus the scrolling line, when there is one), so
 they never affect playback or the spectrum analyzer. Cabinets without extra
 panels simply ignore them.
 
-**If a screen still shows the wrong thing**, create a file named `jukebox.cfg`
-at the root of the USB stick with `diag = 1` in it. Jukebox then labels each
-panel on screen and writes `jukebox-panels.log` beside the file, which is enough
-to work out what your cabinet is doing. The same file can force the assignment:
-`playfield`, `backglass` and `dmd` each take a connector number from the log.
+**If a screen still shows the wrong thing**, send a log (see *Sending a log*
+below): it shows what your cabinet is doing. The same `jukebox.cfg` file can
+force the assignment: `playfield`, `backglass` and `dmd` each take a connector
+number from the log.
 
 ---
 
@@ -323,6 +322,24 @@ still work for anyone who has one.
   YouTube** (music, videos, YouTube lists) —
   radio streams are continuous, so there's no length to show or next track to
   advance to.
+
+## Sending a log
+
+Something not working (a screen showing the wrong thing, a YouTube video or
+cover that won't load, the backglass not changing)? A log usually shows why:
+
+1. On a computer, create a plain text file named `jukebox.cfg` at the **root of
+   the USB stick**, next to the `external` folder.
+2. Put this one line in it: `diag = 1`
+3. Plug the stick back in, open Jukebox and do whatever goes wrong.
+4. Close Jukebox and copy `jukebox-panels.log` from the root of the stick.
+
+Then [open an issue](https://github.com/Bla1ze/atgames-juke-box/issues): say
+what you did and what you saw, and attach the log. While `diag` is on, Jukebox
+also labels each screen with which panel it is; delete `jukebox.cfg` (or set
+`diag = 0`) when you're done.
+
+---
 
 ## 🙏 Credits
 
