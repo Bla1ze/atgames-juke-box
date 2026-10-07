@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.4.2 — 7 October 2026
+
+**The backglass now lets go of a video.** After watching YouTube (or a video)
+and then playing a song from your library, the backglass could keep showing the
+video instead of the song's cover. It now always returns to the cover. Picking
+something else while a YouTube video is still starting also can't bring that
+video (or its thumbnail) back over the new track.
+
 ## 2.4.1 — 7 October 2026
 
 **YouTube covers now show on the cabinet.** In 2.4 the video's thumbnail never
