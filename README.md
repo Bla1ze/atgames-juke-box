@@ -10,15 +10,27 @@
 
 
 A music and internet-radio player for AtGames devices. Browse thousands of online
-radio stations, search by name, save your favorites, or play audio files from a
-USB drive — with an album-tinted **Now Playing** screen, a spinning record for
-radio, and a live spectrum analyzer that dances to the music.
+radio stations, search by name, save your favorites, play audio files from a
+USB drive, or play videos on the backglass — with an album-tinted **Now
+Playing** screen, a spinning record for radio, and a live spectrum analyzer that
+dances to the music.
 
-Plays MP3, AAC, FLAC, OGG, Opus, WAV, and WMA.
+Plays MP3, AAC, FLAC, OGG, Opus, WAV, and WMA, plus MP4, M4V, MKV, MOV, WebM
+and AVI videos.
 
 ---
 
-## ✨ New in 2.2
+## ✨ New in 2.3
+
+- **Videos on the backglass.** A new **Videos** strip on the main menu plays
+  video files from a `videos` folder on the USB drive. The picture fills the
+  backglass while the playfield shows Now Playing with a progress bar, and the
+  rest of the folder plays after it, like an album. Works on the 4KP and HDP.
+- **Videos over Wi-Fi.** The transfer page, now **Add music and videos over
+  Wi-Fi**, takes video files too and puts them in the `videos` folder.
+- Counts read "1 album" and "1 track" instead of "1 albums".
+
+## New in 2.2
 
 - **Add music over Wi-Fi.** In **My Music**, choose **Add music over Wi-Fi**.
   The cabinet shows an address and a PIN: open the address in a browser on any
@@ -75,6 +87,7 @@ Open Jukebox and you land on the main menu:
 | **🔎 Search** | Type a station name on the on-screen keyboard to find it. |
 | **❤️ Favorites** | Your saved stations, kept between sessions. |
 | **📁 My Music** | Your own music from a USB drive, browsable by album and artist. |
+| **🎬 Videos** (strip under the tiles) | Video files from a USB drive, played on the backglass. |
 
 Pick a station or track and it starts playing. Playback keeps going in the
 background while you browse other screens — the **mini player** at the bottom of
@@ -119,7 +132,7 @@ USB DRIVE (root)
 ```
 
 **Browsing:** My Music opens to **Albums**, **Artists**, **All Tracks**, a
-**Shuffle** toggle, and **Add music over Wi-Fi**.
+**Shuffle** toggle, and **Add music and videos over Wi-Fi**.
 
 - **Albums** lists every album with its artist and track count. Open one and play
   a track — `←/→` on Now Playing then steps through that album, and when it ends
@@ -159,16 +172,53 @@ artist. Anything it can't place lands under **Unknown Album / Unknown Artist**.
 (tags are read from MP3 and FLAC; the rest still play and group by folder.)
 
 **Over Wi-Fi:** no need to take the drive out. In **My Music**, choose **Add
-music over Wi-Fi** (or press `Start` on the *"No music found"* screen). Jukebox
-shows an address like `http://192.168.1.20:8080` and a 4-digit PIN. Open the
-address in a browser on a computer or phone on the same network, enter the PIN,
-and drop in songs or folders. Folders are kept (up to three levels, like
-`Artist/Album/Disc 1`), cover images come along, and songs already there are
-skipped. Press `Back` on the cabinet when you're done and the library rescans.
+music and videos over Wi-Fi** (or press `Start` on the *"No music found"*
+screen). Jukebox shows an address like `http://192.168.1.20:8080` and a 4-digit
+PIN. Open the address in a browser on a computer or phone on the same network,
+enter the PIN, and drop in songs, videos or folders. Folders are kept (up to
+three levels, like `Artist/Album/Disc 1`), cover images come along, and files
+already there are skipped. Videos go to the `videos` folder, everything else to
+`music`. Press `Back` on the cabinet when you're done and the library rescans.
 
 Seeing *"No music found"*? Make sure the folder is named exactly `music`, sits at
 the drive's root, and holds files of the types above. A large library shows
 **"Scanning library…"** briefly on first open while tags are read.
+
+---
+
+## 🎬 Playing your own videos
+
+Jukebox plays video files from a folder named **`videos`** at the **root of the
+USB drive**, on the backglass.
+
+1. Create a folder named `videos` (all lowercase) in the drive's root.
+2. Copy your videos into it. Sub-folders work, and show as folders in the list.
+3. Plug the drive in and choose **Videos** on the main menu (the strip under
+   the tiles).
+
+```
+USB DRIVE (root)
+├── music/
+└── videos/
+    ├── Live at Wembley.mp4
+    └── Music Videos/
+        ├── 01 First Video.mp4
+        └── 02 Second Video.mkv
+```
+
+Pick a video and it plays on the **backglass**, with its sound through the
+cabinet. The **playfield** shows Now Playing with the title and a progress bar,
+and the **DMD** shows the title. Like an album, the rest of the folder plays
+after it; `←/→` skip, `Start` pauses, and shuffle works here too. When the
+video ends, the backglass goes back to the Jukebox artwork.
+
+You can also send videos over Wi-Fi: **My Music › Add music and videos over
+Wi-Fi** puts them in the `videos` folder.
+
+**Supported formats:** `mp4` · `m4v` · `mkv` · `mov` · `webm` · `avi`. **H.264
+video up to 1080p at 30 fps plays best.** 4K, 60 fps or HEVC (H.265) files may
+stutter, since the cabinet decodes video in software. There's no seeking within
+a video yet.
 
 ---
 
@@ -180,6 +230,7 @@ Jukebox lights them up too:
   soft, blurred wash of itself, with the track title and artist beneath. A title
   or artist too long to fit **scrolls** across instead of shrinking. On radio it
   shows the station name.
+- While a **video** plays, it fills the backglass instead.
 - The **DMD** strip becomes a lit **Jukebox marquee** — the logo on a neon
   gradient, with the track title (or station name) captioned below it.
 
@@ -210,13 +261,15 @@ still work for anyone who has one.
 | **Search** | `Arrows` move · `Start` press key · `Back` to menu — then `Start` play, `Flipper` favorite on results |
 | **Favorites** | `Arrows` select · `Start` play · `Flipper` remove · `Back` to menu |
 | **My Music** | `Arrows` select · `Start` open a list / play a track / toggle Shuffle · `Back` up a level (or to menu at the top) |
+| **Videos** | `Arrows` select · `Start` open a folder / play a video · `Back` up a folder (or to menu at the top) |
 | **Now Playing** | `←/→` previous / next · `Start` pause · `Flipper` shuffle (local) or favorite (radio) · `Back` to My Music's view list (if you started there) or the menu |
 
 ---
 
 ## Good to know
 
-- **Radio and Search need an internet connection.** My Music works offline.
+- **Radio and Search need an internet connection.** My Music and Videos work
+  offline.
 - **Updates:** Jukebox checks GitHub for a new version when it starts (quietly;
   offline is fine). A banner under the main menu tiles offers it; the update
   replaces only `jukebox-app.elf` and then restarts Jukebox.
@@ -224,7 +277,8 @@ still work for anyone who has one.
   1.x, so your saved stations are still there after upgrading.
 - Radio stations come and go — if one won't play, it may simply be offline; try
   another.
-- Auto-advance, shuffle, and the progress bar apply to **local files only** —
+- Auto-advance, shuffle, and the progress bar apply to **local files only** (music
+  and videos) —
   radio streams are continuous, so there's no length to show or next track to
   advance to.
 

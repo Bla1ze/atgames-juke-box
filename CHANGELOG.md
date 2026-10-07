@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.3 — 7 October 2026
+
+**Videos on the backglass.**
+
+- **Videos.** A new Videos strip on the main menu, under the four tiles, plays
+  video files (MP4, M4V, MKV, MOV, WebM, AVI) from a `videos` folder on the USB
+  drive, folder by folder. The picture fills the backglass, the playfield shows
+  Now Playing with a progress bar, and the DMD shows the title. The rest of the
+  folder plays after it, like an album, with skip, pause and shuffle. When it
+  ends, the backglass returns to the Jukebox artwork. Placed correctly on both
+  the 4KP and the HDP. H.264 up to 1080p30 plays best.
+- **Videos over Wi-Fi.** *Add music over Wi-Fi* is now *Add music and videos
+  over Wi-Fi*: video files sent from the transfer page go to the `videos`
+  folder, keeping their folders.
+- The main menu tiles are a little shorter to fit the Videos strip.
+- Counts read "1 album", "1 artist" and "1 track" instead of "1 albums".
+
 ## 2.2.1 — 6 October 2026
 
 **A small release to try the new in-app updater.** Nothing else changes from
