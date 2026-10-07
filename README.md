@@ -3,7 +3,7 @@
 **Website: [bla1ze.github.io/atgames-juke-box](https://bla1ze.github.io/atgames-juke-box/)**
 
 <p align="center">
-  <img src="screenshots/main-menu.png" width="280" alt="Main menu with the Now Playing card and Radio, Search, Favorites and My Music tiles" />
+  <img src="screenshots/main-menu.png" width="280" alt="Main menu with the Now Playing card and Radio, Search, Favorites, My Music, Videos and YouTube tiles" />
   <img src="screenshots/now-playing.png" width="280" alt="Now Playing with album art, progress bar and spectrum" />
   <img src="screenshots/radio-browse.png" width="280" alt="Radio category list with the mini player" />
 </p>
