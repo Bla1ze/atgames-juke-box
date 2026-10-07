@@ -1,0 +1,39 @@
+# JUKEBOX
+Internet radio, your own music and videos, and
+YouTube on your cabinet. A free fan project by
+Bla1ze. Not affiliated with or endorsed by
+AtGames.
+
+# WHERE THE MUSIC COMES FROM
+Jukebox doesn't host or own any of what it plays.
+- Radio stations come from the community
+  Radio Browser directory (radio-browser.info).
+  Each station belongs to its broadcaster.
+- YouTube videos and live streams belong to
+  their creators. Jukebox isn't affiliated with
+  YouTube or Google, or with the channels it
+  lists (Lofi Girl, NewRetroWave,
+  NoCopyrightSounds, NPR Music).
+- Your own music and videos stay on your USB
+  drive.
+
+# BUILT WITH
+- Noto Sans and Bebas Neue fonts
+  SIL Open Font License 1.1
+  (NotoSans-OFL.txt, BebasNeue-OFL.txt)
+- stb_image by Sean Barrett
+  public domain
+- The cabinet's own ffmpeg, curl and Python
+
+# DOWNLOADED WHEN YOU ASK
+- yt-dlp (github.com/yt-dlp/yt-dlp)
+  public domain (Unlicense). Not shipped with
+  Jukebox: it's fetched from its GitHub releases
+  the first time you open YouTube (Jukebox asks
+  first) and kept up to date weekly.
+
+# THANKS
+- Display info: @n-i-x
+
+The full license texts are in this licenses
+folder, next to the app on the USB drive.

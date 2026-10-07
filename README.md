@@ -343,7 +343,8 @@ also labels each screen with which panel it is; delete `jukebox.cfg` (or set
 
 ## 🙏 Credits
 
-- Fonts: **Noto Sans** & **Bebas Neue** (SIL Open Font License).
+- Fonts: **Noto Sans** & **Bebas Neue** (SIL Open Font License; the full texts are in the
+  release zip's `licenses` folder, with `CREDITS.txt`).
 - Images: **stb_image** by Sean Barrett (public domain).
 - YouTube: **[yt-dlp](https://github.com/yt-dlp/yt-dlp)** (public domain, Unlicense). It isn't
   shipped with Jukebox: the app downloads it from yt-dlp's GitHub releases the first time you open
