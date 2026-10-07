@@ -285,4 +285,9 @@ still work for anyone who has one.
 ## 🙏 Credits
 
 - Fonts: **Noto Sans** & **Bebas Neue** (SIL Open Font License).
+- Images: **stb_image** by Sean Barrett (public domain).
+- YouTube: **[yt-dlp](https://github.com/yt-dlp/yt-dlp)** (public domain, Unlicense). It isn't
+  shipped with Jukebox: the app downloads it from yt-dlp's GitHub releases the first time you open
+  YouTube, after asking, and keeps it up to date weekly. Jukebox isn't affiliated with YouTube,
+  Google, or the channels it lists; videos belong to their creators.
 - Display info: @n-i-x
