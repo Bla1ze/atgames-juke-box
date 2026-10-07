@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.4 — 7 October 2026
+
+**YouTube on the backglass.**
+
+- **YouTube.** A new YouTube tile: Search YouTube, or pick a music channel —
+  Lofi Girl (its 24/7 live radios), NewRetroWave, NoCopyrightSounds and NPR
+  Music. A video plays on the backglass like Videos, with Now Playing on the
+  playfield; the rest of the list follows, with skip and shuffle. The video's
+  thumbnail is the cover (the whole frame, on a soft blur). "Finding the
+  stream" shows while it starts, and "Buffering: the stream is slow right now"
+  when YouTube sends it slower than it plays.
+- **yt-dlp, asked for once.** YouTube plays through yt-dlp (public domain),
+  which isn't shipped with Jukebox: the first visit asks, downloads it from
+  GitHub (about 3 MB) and keeps it updated weekly.
+- **Six tiles.** The main menu is three even rows of two tiles; Videos moved
+  from its strip into the grid next to YouTube.
+- Emoji in YouTube titles are dropped (the screens' fonts can't draw them).
+- The radio LIVE badge is centered, with a steady dot and a soft pulse.
+
 ## 2.3 — 7 October 2026
 
 **Videos on the backglass.**

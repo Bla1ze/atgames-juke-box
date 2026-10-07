@@ -11,16 +11,27 @@
 
 A music and internet-radio player for AtGames devices. Browse thousands of online
 radio stations, search by name, save your favorites, play audio files from a
-USB drive, or play videos on the backglass — with an album-tinted **Now
-Playing** screen, a spinning record for radio, and a live spectrum analyzer that
-dances to the music.
+USB drive, or play videos and YouTube on the backglass — with an album-tinted
+**Now Playing** screen, a spinning record for radio, and a live spectrum
+analyzer that dances to the music.
 
 Plays MP3, AAC, FLAC, OGG, Opus, WAV, and WMA, plus MP4, M4V, MKV, MOV, WebM
 and AVI videos.
 
 ---
 
-## ✨ New in 2.3
+## ✨ New in 2.4
+
+- **YouTube.** A new **YouTube** tile plays YouTube on the backglass: **Search
+  YouTube**, or pick a music channel — **Lofi Girl** (its 24/7 live radios),
+  **NewRetroWave**, **NoCopyrightSounds** and **NPR Music** (Tiny Desk). The
+  video's thumbnail becomes the cover on Now Playing, and the rest of the list
+  plays after it. See **Watching YouTube** below.
+- **Six tiles.** The main menu is now three even rows: Radio, Search /
+  Favorites, My Music / Videos, YouTube.
+- The radio **LIVE** badge is centered properly.
+
+## New in 2.3
 
 - **Videos on the backglass.** A new **Videos** strip on the main menu plays
   video files from a `videos` folder on the USB drive. The picture fills the
@@ -87,7 +98,8 @@ Open Jukebox and you land on the main menu:
 | **🔎 Search** | Type a station name on the on-screen keyboard to find it. |
 | **❤️ Favorites** | Your saved stations, kept between sessions. |
 | **📁 My Music** | Your own music from a USB drive, browsable by album and artist. |
-| **🎬 Videos** (strip under the tiles) | Video files from a USB drive, played on the backglass. |
+| **🎬 Videos** | Video files from a USB drive, played on the backglass. |
+| **▶️ YouTube** | Search YouTube or pick a music channel; plays on the backglass. Needs yt-dlp (asked for the first time). |
 
 Pick a station or track and it starts playing. Playback keeps going in the
 background while you browse other screens — the **mini player** at the bottom of
@@ -193,8 +205,7 @@ USB drive**, on the backglass.
 
 1. Create a folder named `videos` (all lowercase) in the drive's root.
 2. Copy your videos into it. Sub-folders work, and show as folders in the list.
-3. Plug the drive in and choose **Videos** on the main menu (the strip under
-   the tiles).
+3. Plug the drive in and choose **Videos** on the main menu.
 
 ```
 USB DRIVE (root)
@@ -219,6 +230,36 @@ Wi-Fi** puts them in the `videos` folder.
 video up to 1080p at 30 fps plays best.** 4K, 60 fps or HEVC (H.265) files may
 stutter, since the cabinet decodes video in software. There's no seeking within
 a video yet.
+
+---
+
+## ▶️ Watching YouTube
+
+Choose **YouTube** on the main menu. The list starts with **Search YouTube**,
+then four music channels:
+
+| Channel | Opens |
+| --- | --- |
+| **Lofi Girl** | Its 24/7 live radios (lofi hip hop, sleep, lofi house and more) |
+| **NewRetroWave** | The latest synthwave and outrun videos |
+| **NoCopyrightSounds** | The latest EDM releases |
+| **NPR Music** | The latest videos, mostly Tiny Desk concerts |
+
+Pick a video and it plays on the **backglass** like Videos, with Now Playing on
+the playfield: the video's **thumbnail as the cover**, its channel, and a
+progress bar (live streams have no length). The rest of the list plays after it;
+`←/→` skip and shuffle works too. It takes a few seconds to start ("Finding the
+stream"), and if YouTube sends it slower than it plays, Now Playing says
+**"Buffering: the stream is slow right now"** for a moment.
+
+**One-time setup:** YouTube plays through
+[yt-dlp](https://github.com/yt-dlp/yt-dlp), a free, public-domain tool that
+isn't part of Jukebox. The first time you open YouTube, Jukebox asks, then
+downloads it from yt-dlp's GitHub releases (about 3 MB) into its `data` folder,
+and keeps it up to date weekly in the background. YouTube needs the internet.
+
+Thumbnails are kept as a small cache (the 50 most recently played, a few MB);
+older ones are removed automatically.
 
 ---
 
@@ -262,14 +303,15 @@ still work for anyone who has one.
 | **Favorites** | `Arrows` select · `Start` play · `Flipper` remove · `Back` to menu |
 | **My Music** | `Arrows` select · `Start` open a list / play a track / toggle Shuffle · `Back` up a level (or to menu at the top) |
 | **Videos** | `Arrows` select · `Start` open a folder / play a video · `Back` up a folder (or to menu at the top) |
+| **YouTube** | `Arrows` select · `Start` open a channel / play a video (on the keyboard, press a key) · `Back` up a level (or to menu at the top) |
 | **Now Playing** | `←/→` previous / next · `Start` pause · `Flipper` shuffle (local) or favorite (radio) · `Back` to My Music's view list (if you started there) or the menu |
 
 ---
 
 ## Good to know
 
-- **Radio and Search need an internet connection.** My Music and Videos work
-  offline.
+- **Radio, Search and YouTube need an internet connection.** My Music and Videos
+  work offline.
 - **Updates:** Jukebox checks GitHub for a new version when it starts (quietly;
   offline is fine). A banner under the main menu tiles offers it; the update
   replaces only `jukebox-app.elf` and then restarts Jukebox.
@@ -277,8 +319,8 @@ still work for anyone who has one.
   1.x, so your saved stations are still there after upgrading.
 - Radio stations come and go — if one won't play, it may simply be offline; try
   another.
-- Auto-advance, shuffle, and the progress bar apply to **local files only** (music
-  and videos) —
+- Auto-advance, shuffle, and the progress bar apply to **local files and
+  YouTube** (music, videos, YouTube lists) —
   radio streams are continuous, so there's no length to show or next track to
   advance to.
 

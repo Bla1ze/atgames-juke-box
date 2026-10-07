@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jukebox for AtGames Legends Pinball</title>
-<meta name="description" content="A music and internet-radio player for AtGames Legends Pinball 4KP/HDP cabinets: thousands of radio stations, your own music and videos from USB, album art and videos on the backglass, and a jukebox marquee on the DMD.">
+<meta name="description" content="A music and internet-radio player for AtGames Legends Pinball 4KP/HDP cabinets: thousands of radio stations, your own music and videos from USB, YouTube, album art and videos on the backglass, and a jukebox marquee on the DMD.">
 <meta property="og:title" content="Jukebox">
 <meta property="og:description" content="A music and internet-radio player for AtGames Legends Pinball cabinets.">
 <meta property="og:image" content="assets/jukebox-app.png">
@@ -112,7 +112,7 @@ footer a { color: var(--dim); }
       <div class="kicker">FOR ATGAMES LEGENDS PINBALL 4KP &amp; HDP</div>
       <h1>Jukebox</h1>
       <p class="lead">A music and internet-radio player for your pinball cabinet. Tune into <b>thousands of radio stations</b>,
-        play <b>your own music</b> and <b>videos</b> from a USB drive, and watch the album art (or the video) light up
+        play <b>your own music</b>, <b>videos</b> and <b>YouTube</b>, and watch the album art (or the video) light up
         the backglass while a <b>jukebox marquee</b> glows on the DMD.</p>
       <div class="buttons">
         <a class="btn main" href="https://github.com/Bla1ze/atgames-juke-box/releases/latest">Download the latest release</a>
@@ -145,7 +145,8 @@ footer a { color: var(--dim); }
       <div class="card"><span class="ico">❤️</span><h3>Favorites</h3><p>Save stations with a flipper. They're kept between sessions and carry over between versions.</p></div>
       <div class="card"><span class="ico">📁</span><h3>Your own music</h3><p>A <code>music</code> folder on the USB drive becomes a library by album and artist, with shuffle and auto-advance.</p></div>
       <div class="card"><span class="ico">💿</span><h3>Now Playing</h3><p>Album art over a blurred wash of itself, a progress bar, and a live spectrum analyzer. Radio gets a spinning record.</p></div>
-      <div class="card"><span class="ico">🎬</span><h3>Videos on the backglass</h3><p>A <code>videos</code> folder on the USB drive plays on the backglass, folder by folder, with Now Playing on the playfield. New in 2.3.</p></div>
+      <div class="card"><span class="ico">▶️</span><h3>YouTube</h3><p>Search YouTube or pick a music channel &ndash; Lofi Girl's 24/7 radios, NewRetroWave, NoCopyrightSounds, NPR Music &ndash; and it plays on the backglass, the thumbnail as the cover. New in 2.4.</p></div>
+      <div class="card"><span class="ico">🎬</span><h3>Videos on the backglass</h3><p>A <code>videos</code> folder on the USB drive plays on the backglass, folder by folder, with Now Playing on the playfield.</p></div>
       <div class="card"><span class="ico">✨</span><h3>Every screen lit</h3><p>The album cover big on the backglass, a lit jukebox marquee on the DMD, placed right on both the 4KP and HDP.</p></div>
       <div class="card"><span class="ico">🎚️</span><h3>Plays everything</h3><p>MP3, AAC, FLAC, OGG, Opus, WAV and WMA, with album art from the folder or embedded in MP3 and FLAC files. Videos in MP4, MKV, MOV, WebM and AVI.</p></div>
       <div class="card"><span class="ico">🕹️</span><h3>No extra controls needed</h3><p>Everything works with the cabinet's own buttons and flippers. An Arcade Control Panel isn't required.</p></div>
@@ -195,6 +196,7 @@ footer a { color: var(--dim); }
       <tr><td>Favorites</td><td><kbd>Arrows</kbd> select &middot; <kbd>Start</kbd> play &middot; <kbd>Flipper</kbd> remove &middot; <kbd>Back</kbd> to menu</td></tr>
       <tr><td>My Music</td><td><kbd>Arrows</kbd> select &middot; <kbd>Start</kbd> open / play / toggle Shuffle &middot; <kbd>Back</kbd> up a level</td></tr>
       <tr><td>Videos</td><td><kbd>Arrows</kbd> select &middot; <kbd>Start</kbd> open a folder / play &middot; <kbd>Back</kbd> up a folder</td></tr>
+      <tr><td>YouTube</td><td><kbd>Arrows</kbd> select &middot; <kbd>Start</kbd> open a channel / play &middot; <kbd>Back</kbd> up a level</td></tr>
       <tr><td>Now Playing</td><td><kbd>&larr;/&rarr;</kbd> previous / next &middot; <kbd>Start</kbd> pause &middot; <kbd>Flipper</kbd> shuffle (your music) or favorite (radio) &middot; <kbd>Back</kbd> back</td></tr>
     </table>
   </div>
@@ -217,12 +219,13 @@ footer a { color: var(--dim); }
     <h2>Questions &amp; <span>help</span></h2>
     <p class="intro">The basics. The <a href="https://github.com/Bla1ze/atgames-juke-box#readme">README</a> has the full details.</p>
     <details open><summary>Which cabinets does it work on?</summary><div class="a"><p>AtGames Legends Pinball <b>4KP</b> and <b>HDP</b>. Jukebox reads the cabinet model to put the menu, the backglass art and the DMD marquee on the right screens.</p></div></details>
-    <details><summary>Does it need the internet?</summary><div class="a"><p>Radio and Search do. <b>My Music</b> works offline.</p></div></details>
+    <details><summary>Does it need the internet?</summary><div class="a"><p>Radio, Search and YouTube do. <b>My Music</b> and <b>Videos</b> work offline.</p></div></details>
     <details><summary>Do I need the Arcade Control Panel?</summary><div class="a"><p>No. Everything works with the cabinet&#39;s own buttons; a flipper saves favorites. <code>Y</code> and <code>X</code> still work if you have a panel.</p></div></details>
     <details><summary>It says "No music found".</summary><div class="a"><p>Check that the folder is named exactly <code>music</code> (lowercase), sits at the root of the USB drive, and holds files of a supported type: MP3, M4A/AAC, FLAC, OGG, Opus, WAV or WMA. A large library shows "Scanning library&hellip;" briefly the first time. More in the <a href="your-music.html#trouble">Your music guide</a>.</p></div></details>
     <details><summary>My album art doesn&#39;t show.</summary><div class="a"><p>Put a <code>cover.jpg</code> (or <code>folder</code> / <code>front</code>, .jpg or .png) in the album&#39;s folder. Pictures embedded in MP3 and FLAC files are read too, but not yet those inside M4A/AAC files.</p></div></details>
     <details><summary>A radio station won&#39;t play.</summary><div class="a"><p>Stations come and go, so it may simply be offline right now. Try another one.</p></div></details>
     <details><summary>Something shows on the wrong screen.</summary><div class="a"><p>Create a file named <code>jukebox.cfg</code> at the root of the USB stick containing <code>diag = 1</code>. Jukebox then labels each screen and writes <code>jukebox-panels.log</code> next to the file. Open an <a href="https://github.com/Bla1ze/atgames-juke-box/issues">issue</a> with that log.</p></div></details>
+    <details><summary>How does YouTube work?</summary><div class="a"><p>Choose <b>YouTube</b> on the main menu: <b>Search YouTube</b>, or pick Lofi Girl (its 24/7 live radios), NewRetroWave, NoCopyrightSounds or NPR Music. The video plays on the backglass with Now Playing on the playfield, and the rest of the list follows. YouTube plays through <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>, a free, public-domain tool that isn't part of Jukebox: the first time, Jukebox asks, downloads it from GitHub (about 3 MB) and keeps it updated weekly. It needs the internet. Jukebox isn't affiliated with YouTube or the channels it lists.</p></div></details>
     <details><summary>How do I play videos?</summary><div class="a"><p>Make a folder named <code>videos</code> at the root of the USB drive, copy video files into it (sub-folders are fine), and choose <b>Videos</b> on the main menu, the strip under the tiles. The video plays on the backglass with Now Playing on the playfield, and the rest of the folder follows. H.264 up to 1080p at 30 fps plays best; 4K, 60 fps or HEVC files may stutter.</p></div></details>
     <details><summary>Can I add music or videos without taking the USB drive out?</summary><div class="a"><p>Yes. In <b>My Music</b>, choose <b>Add music and videos over Wi-Fi</b>. The cabinet shows an address and a PIN: open the address in a browser on a computer or phone on the same network, enter the PIN, and drop in songs, videos or whole album folders. Videos go to the <code>videos</code> folder. Press <kbd>Back</kbd> on the cabinet when you're done. See the <a href="your-music.html#wifi">Your music guide</a>.</p></div></details>
     <details><summary>How do I update Jukebox?</summary><div class="a"><p>From version 2.2, Jukebox checks for a new version when it starts. When there is one, a banner appears under the main menu tiles: select it, choose <b>Install</b>, then <b>Restart now</b>. Only the app itself is replaced. On 2.1 or older, install 2.2 by hand once (see <a href="#install">Get started</a>).</p></div></details>
