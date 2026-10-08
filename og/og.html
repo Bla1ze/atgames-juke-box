@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- Template for docs/assets/og-image.jpg (1200x630). Re-render with og/render.sh. -->
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; color: #f6efff; font-family: 'Noto Sans', sans-serif; background: #0b0614; }
+  .glow { position: absolute; inset: 0;
+    background: radial-gradient(520px 420px at 12% 18%, rgba(255,46,147,.32), transparent 70%),
+                radial-gradient(560px 460px at 88% 85%, rgba(139,61,255,.40), transparent 70%),
+                radial-gradient(380px 300px at 70% 10%, rgba(46,230,255,.16), transparent 70%); }
+  .text { position: absolute; left: 70px; top: 86px; width: 540px; }
+  .kicker { font: 600 22px 'Noto Sans'; letter-spacing: .22em; text-transform: uppercase; color: #2ee6ff; }
+  h1 { font: 400 168px/.86 'Bebas Neue'; letter-spacing: .02em; margin: 18px 0 20px -4px; color: #fff;
+    text-shadow: 0 0 18px rgba(255,46,147,.9), 0 0 48px rgba(255,46,147,.55); }
+  p { font-size: 27px; line-height: 1.38; color: #d9ccef; font-weight: 500; }
+  .url { position: absolute; left: 70px; bottom: 48px; font: 600 22px 'Noto Sans'; color: #b9a8d6; }
+  .pill { color: #ffc93c; }
+  .shots { position: absolute; right: 40px; top: 36px; width: 540px; height: 560px; }
+  .shots img { position: absolute; border-radius: 16px; box-shadow: 0 24px 60px rgba(0,0,0,.7), 0 0 0 2px rgba(255,255,255,.08); }
+  .art { width: 300px; left: 120px; top: 30px; z-index: 2; box-shadow: 0 24px 60px rgba(0,0,0,.7), 0 0 40px rgba(255,46,147,.45) !important; }
+  .s1 { width: 210px; left: 0; top: 140px; transform: rotate(-9deg); }
+  .s2 { width: 210px; left: 335px; top: 140px; transform: rotate(9deg); }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: linear-gradient(90deg, #ff2e93, #8b3dff, #2ee6ff); }
+</style></head><body>
+  <div class="glow"></div>
+  <div class="text">
+    <div class="kicker">For AtGames Legends Pinball</div>
+    <h1>Jukebox</h1>
+    <p>Internet radio, your own music, videos and YouTube, with album art on the backglass.</p>
+  </div>
+  <div class="url">bla1ze.github.io/atgames-juke-box</div>
+  <div class="shots">
+    <img class="s1" src="../docs/assets/main-menu.png">
+    <img class="s2" src="../docs/assets/now-playing.png">
+    <img class="art" src="../docs/assets/jukebox-app.png">
+  </div>
+  <div class="bar"></div>
+</body></html>
