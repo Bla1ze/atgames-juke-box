@@ -1,0 +1,41 @@
+<!-- Blog header (Ghost feature image), 1600x900 at 1.5x = 2400x1350. Re-render with og/render-blog-header.sh. -->
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1600px; height: 900px; overflow: hidden; }
+  body { position: relative; background: #0b0614; font-family: 'Noto Sans', sans-serif; }
+  .glow { position: absolute; inset: 0;
+    background: radial-gradient(700px 520px at 50% 46%, rgba(255,46,147,.38), transparent 70%),
+                radial-gradient(640px 520px at 12% 90%, rgba(139,61,255,.45), transparent 70%),
+                radial-gradient(640px 520px at 90% 90%, rgba(46,230,255,.22), transparent 70%); }
+  /* spectrum bars along the floor */
+  .eq { position: absolute; left: 0; right: 0; bottom: 10px; height: 300px; display: flex; align-items: flex-end; gap: 6px; padding: 0 6px;
+    -webkit-mask-image: linear-gradient(transparent, #000 70%); opacity: .55; }
+  .eq i { flex: 1; border-radius: 4px 4px 0 0; background: linear-gradient(#2ee6ff, #8b3dff 55%, #ff2e93); }
+  .phone { position: absolute; width: 330px; border-radius: 22px; box-shadow: 0 30px 80px rgba(0,0,0,.75), 0 0 0 2px rgba(255,255,255,.08); }
+  .p1 { left: 250px; top: 205px; transform: rotate(-11deg); }
+  .p2 { right: 250px; top: 205px; transform: rotate(11deg); }
+  .p3 { left: 355px; top: 300px; width: 270px; transform: rotate(-20deg); opacity: .0; }
+  .art { position: absolute; left: 50%; top: 56px; width: 500px; margin-left: -250px; border-radius: 22px; z-index: 2;
+    box-shadow: 0 34px 90px rgba(0,0,0,.8), 0 0 70px rgba(255,46,147,.55), 0 0 0 2px rgba(255,255,255,.12); }
+  .kicker { position: absolute; left: 0; right: 0; top: 16px; text-align: center; z-index: 3;
+    font: 600 20px 'Noto Sans'; letter-spacing: .3em; text-transform: uppercase; color: #2ee6ff; opacity: 0; }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: linear-gradient(90deg, #ff2e93, #8b3dff, #2ee6ff); }
+</style></head><body>
+  <div class="glow"></div>
+  <div class="eq" id="eq"></div>
+  <img class="phone p1" src="../screenshots/main-menu.png">
+  <img class="phone p2" src="../screenshots/now-playing.png">
+  <img class="art" src="../jukebox-app.png">
+  <div class="bar"></div>
+<script>
+  // Deterministic "spectrum": smooth hump plus ripple, so every render matches.
+  const eq = document.getElementById('eq');
+  for (let i = 0; i < 64; i++) {
+    const x = i / 63, h = 18 + 70 * Math.pow(Math.sin(Math.PI * x), .6) * (.55 + .45 * Math.abs(Math.sin(i * 1.7) * Math.cos(i * .53)));
+    const b = document.createElement('i'); b.style.height = h + '%'; eq.appendChild(b);
+  }
+</script>
+</body></html>
