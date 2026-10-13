@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.4.4 — 13 October 2026
+
+**Missing album covers are found online.** When a song has no cover in its
+folder or inside the file (iTunes Store purchases often kept theirs in iTunes),
+Jukebox looks the artist and album up on Apple's iTunes Search and shows the
+cover on Now Playing and the backglass. It only takes a cover when the album
+name matches exactly, keeps it in `data/covers/` inside the app's folder (never
+in your music folders), and asks about each album once. A `cover.jpg` in the
+album's folder still wins. `covers = 0` in `/media/usb0/jukebox.cfg` turns the
+lookup off.
+
 ## 2.4.3 — 13 October 2026
 
 **M4A albums show their covers and names.** Covers built into M4A files now

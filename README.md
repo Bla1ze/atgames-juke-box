@@ -158,14 +158,17 @@ name (say, two *Greatest Hits*) stay separate. An album split into `CD1` / `CD2`
 (or `Disc 1` / `Disc 2`) sub-folders stays one album, and an album with several
 artists shows as **Various Artists**.
 
-**Album art** comes from either:
+**Album art** comes from, in order:
 
 - an image in the album's folder — `cover`, `folder`, or `front` (`.jpg`, `.jpeg`,
   or `.png`, any capitalization), Windows Media Player's `AlbumArt…Large.jpg`, or
-  failing those, any other image in the folder; or
+  failing those, any other image in the folder;
 - a picture embedded in the file — MP3 (`APIC`), FLAC (`PICTURE`) or M4A (`covr`),
-  at any size.
-  When a file has several pictures, the front cover wins.
+  at any size. When a file has several pictures, the front cover wins;
+- **online**, when the album has neither: Jukebox looks the artist and album up on
+  Apple's iTunes Search and takes the cover only when the album name matches
+  exactly. Found covers are kept in `external/jukebox-app/data/covers/`, never in
+  your music folders. To turn this off, add `covers = 0` to `/media/usb0/jukebox.cfg`.
 
 No art? A spinning record shows instead.
 
