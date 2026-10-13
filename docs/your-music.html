@@ -143,12 +143,12 @@ footer a { color: var(--dim); }
       <tr><th>Format</th><th>Plays</th><th>Names from tags</th><th>Embedded art</th></tr>
       <tr><td>MP3</td><td>Yes</td><td>Yes (ID3v2)</td><td>Yes</td></tr>
       <tr><td>FLAC</td><td>Yes</td><td>Yes (Vorbis comments)</td><td>Yes</td></tr>
-      <tr><td>M4A / AAC</td><td>Yes</td><td>No, from folders</td><td>Not yet: use a <code>cover.jpg</code></td></tr>
+      <tr><td>M4A / AAC</td><td>Yes</td><td>Yes (M4A)</td><td>Yes (M4A)</td></tr>
       <tr><td>OGG, Opus, WAV, WMA</td><td>Yes</td><td>No, from folders</td><td>No: use a <code>cover.jpg</code></td></tr>
     </table>
 
     <h2 id="names">Names <span>&amp; tags</span></h2>
-    <p>For MP3 and FLAC, Jukebox reads the title, artist, album and track number from the file's tags, the same ones a music player or iTunes shows.</p>
+    <p>For MP3, FLAC and M4A, Jukebox reads the title, artist, album and track number from the file's tags, the same ones a music player or iTunes shows. An M4A with no artist uses its album artist.</p>
     <p>For other files, or files with no tags, it uses the folders: the file's folder becomes the <b>album</b> and the folder above it the <b>artist</b>, and the file name becomes the title. Anything it can't place goes under <b>Unknown Album</b> / <b>Unknown Artist</b>.</p>
     <ul>
       <li>Albums are grouped by name <i>and</i> folder, so two different albums with the same name (say, two <i>Greatest Hits</i>) stay separate.</li>
@@ -163,10 +163,10 @@ footer a { color: var(--dim); }
       <li>an image in the album's folder named <code>cover</code>, <code>folder</code> or <code>front</code> (<code>.jpg</code>, <code>.jpeg</code> or <code>.png</code>, any capitalization);</li>
       <li>Windows Media Player's <code>AlbumArt…Large.jpg</code>;</li>
       <li>any other image in the folder;</li>
-      <li>a picture inside an MP3 or FLAC file. When a file has several, the front cover wins.</li>
+      <li>a picture inside an MP3, FLAC or M4A file. When a file has several, the front cover wins.</li>
     </ol>
     <p>No art at all? A spinning record shows instead.</p>
-    <p class="note"><b>Tip:</b> M4A/AAC files often have their cover built in, which Jukebox can't read yet. Save the cover as <code>cover.jpg</code> in the album's folder and it will show.</p>
+    <p class="note"><b>Tip:</b> a bare <code>.aac</code> file (not <code>.m4a</code>) usually has no room for a cover. Save the cover as <code>cover.jpg</code> in the album's folder and it will show.</p>
 
     <h2 id="browsing"><span>Browsing</span></h2>
     <p><b>My Music</b> opens to five rows:</p>

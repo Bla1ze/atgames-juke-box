@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+**M4A albums show their covers and names.** Covers built into M4A files now
+show on Now Playing and the backglass, with no `cover.jpg` needed. Jukebox also
+reads M4A titles, artists, albums and track numbers, so M4A albums are listed
+by name and play in track order instead of being grouped by folder.
+
 ## 2.4.2 — 7 October 2026
 
 **The backglass now lets go of a video.** After watching YouTube (or a video)

@@ -163,11 +163,11 @@ artists shows as **Various Artists**.
 - an image in the album's folder — `cover`, `folder`, or `front` (`.jpg`, `.jpeg`,
   or `.png`, any capitalization), Windows Media Player's `AlbumArt…Large.jpg`, or
   failing those, any other image in the folder; or
-- a picture embedded in the file — MP3 (`APIC`) or FLAC (`PICTURE`), at any size.
+- a picture embedded in the file — MP3 (`APIC`), FLAC (`PICTURE`) or M4A (`covr`),
+  at any size.
   When a file has several pictures, the front cover wins.
 
-No art? A spinning record shows instead. Pictures embedded in M4A/AAC files
-aren't read yet — put a `cover.jpg` in the folder for those.
+No art? A spinning record shows instead.
 
 **Shuffle:** turn it on from the **Shuffle** row (it shows ON/OFF) or with a
 **flipper** on Now Playing while local music is playing. It's a mode — once on, whatever you play
@@ -175,13 +175,14 @@ aren't read yet — put a `cover.jpg` in the folder for those.
 and Now Playing shows a **SHUFFLE** tag.
 
 **Where the album/artist names come from:** Jukebox reads the embedded tags —
-**ID3v2** in MP3s and **Vorbis comments** in FLAC (title, artist, album, track
-number). For other files, or files without tags, it falls back to the folder
+**ID3v2** in MP3s, **Vorbis comments** in FLAC and the **iTunes-style tags** in M4A
+(title, artist, album, track number; M4A uses the album artist when there's no
+artist). For other files, or files without tags, it falls back to the folder
 layout: the file's parent folder becomes the album and the one above it the
 artist. Anything it can't place lands under **Unknown Album / Unknown Artist**.
 
 **Supported formats:** `mp3` · `m4a` · `aac` · `flac` · `ogg` · `opus` · `wav` · `wma`
-(tags are read from MP3 and FLAC; the rest still play and group by folder.)
+(tags are read from MP3, FLAC and M4A; the rest still play and group by folder.)
 
 **Over Wi-Fi:** no need to take the drive out. In **My Music**, choose **Add
 music and videos over Wi-Fi** (or press `Start` on the *"No music found"*
