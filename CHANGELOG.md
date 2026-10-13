@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 2.4.3 — 13 October 2026
 
 **M4A albums show their covers and names.** Covers built into M4A files now
 show on Now Playing and the backglass, with no `cover.jpg` needed. Jukebox also
