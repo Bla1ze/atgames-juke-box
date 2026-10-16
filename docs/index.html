@@ -103,6 +103,13 @@ kbd { font-family: "Bebas Neue", sans-serif; font-size: 15px; letter-spacing: 1p
 .faq .a { padding: 0 18px 16px; color: var(--dim); }
 .faq .a p { margin: 0 0 8px; }
 
+/* Support: an optional PayPal tip jar. */
+.btn .pp, .support .pp { width: 18px; height: 18px; fill: currentColor; vertical-align: -3px; margin-right: 8px; }
+.support .box { display: flex; gap: 28px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.support .box p { margin: 0; color: var(--dim); max-width: 40em; }
+.support .box p b { color: var(--text); font-weight: 600; }
+
 footer { border-top: 1px solid var(--line); padding: 36px 0 50px; color: var(--dim); font-size: 14px; }
 footer a { color: var(--dim); }
 
@@ -128,6 +135,7 @@ footer a { color: var(--dim); }
       <div class="buttons">
         <a class="btn main" href="https://github.com/Bla1ze/atgames-juke-box/releases/latest">Download the latest release</a>
         <a class="btn alt" href="https://github.com/Bla1ze/atgames-juke-box">View on GitHub</a>
+        <a class="btn alt" href="#support"><svg class="pp" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.016 19.198h-4.2a.562.562 0 0 1-.555-.65L5.093.584A.692.692 0 0 1 5.776 0h7.222c3.417 0 5.904 2.488 5.846 5.5-.006.25-.027.5-.066.747A6.794 6.794 0 0 1 12.071 12H8.743a.69.69 0 0 0-.682.583l-.325 2.056-.013.083-.692 4.39-.015.087zM19.79 6.142c-.01.087-.01.175-.023.261a7.76 7.76 0 0 1-7.695 6.598H9.007l-.283 1.795-.013.083-.692 4.39-.134.843-.014.088H6.86l-.497 3.15a.562.562 0 0 0 .555.65h3.612c.34 0 .63-.249.683-.585l.952-6.031a.692.692 0 0 1 .683-.584h2.126a6.793 6.793 0 0 0 6.707-5.752c.306-1.95-.466-3.744-1.89-4.906z"/></svg>Donate</a>
       </div>
     </div>
     <div class="art"><img src="assets/jukebox-app.png" alt="Jukebox artwork: a glowing neon jukebox over purple palm leaves"></div>
@@ -249,12 +257,23 @@ footer a { color: var(--dim); }
   </div>
 </section>
 
+<section id="support" class="support">
+  <div class="wrap">
+    <h2>Support <span>Jukebox</span></h2>
+    <div class="box">
+      <p>Jukebox is free, and every feature works without paying a thing. <b>Donations are never required</b>, but they're
+        appreciated and help keep new versions coming. If Jukebox has earned a spot on your cabinet, you can chip in through PayPal.</p>
+      <a class="btn main" href="https://www.paypal.me/Bla1ze81" target="_blank" rel="noopener"><svg class="pp" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.016 19.198h-4.2a.562.562 0 0 1-.555-.65L5.093.584A.692.692 0 0 1 5.776 0h7.222c3.417 0 5.904 2.488 5.846 5.5-.006.25-.027.5-.066.747A6.794 6.794 0 0 1 12.071 12H8.743a.69.69 0 0 0-.682.583l-.325 2.056-.013.083-.692 4.39-.015.087zM19.79 6.142c-.01.087-.01.175-.023.261a7.76 7.76 0 0 1-7.695 6.598H9.007l-.283 1.795-.013.083-.692 4.39-.134.843-.014.088H6.86l-.497 3.15a.562.562 0 0 0 .555.65h3.612c.34 0 .63-.249.683-.585l.952-6.031a.692.692 0 0 1 .683-.584h2.126a6.793 6.793 0 0 0 6.707-5.752c.306-1.95-.466-3.744-1.89-4.906z"/></svg>Donate with PayPal</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     Jukebox is a free fan project by Bla1ze, not affiliated with or endorsed by AtGames. Fonts: Noto Sans and Bebas Neue (SIL Open Font License).
     Display info: @n-i-x. Radio stations are streamed from their own broadcasters.
     <br><a href="https://github.com/Bla1ze/atgames-juke-box">GitHub</a> &middot; <a href="https://github.com/Bla1ze/atgames-juke-box/releases/latest">Download</a> &middot;
-    <a href="https://github.com/Bla1ze/atgames-juke-box/issues">Report a problem</a> &middot; <a href="https://bla1ze.github.io/retro-launcher/">Also by Bla1ze: Retro Launcher</a>
+    <a href="https://github.com/Bla1ze/atgames-juke-box/issues">Report a problem</a> &middot; <a href="https://www.paypal.me/Bla1ze81" target="_blank" rel="noopener">Donate (optional)</a> &middot; <a href="https://bla1ze.github.io/retro-launcher/">Also by Bla1ze: Retro Launcher</a>
   </div>
 </footer>
 
