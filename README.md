@@ -20,7 +20,20 @@ and AVI videos.
 
 ---
 
-## ✨ New in 2.4
+## ✨ New in 2.5
+
+- **Surround with the SSF kit.** With AtGames' SSF surround kit, Jukebox plays
+  in surround automatically: real 5.1 videos and files as 5.1, and stereo music
+  spread across the kit (bass on the sub/shaker, a softer copy on the rears).
+  Without the kit, stereo as before.
+- **Settings.** A **Settings** strip under the main menu tiles: Surround sound,
+  Rear speakers and Album covers online.
+- **Future-proof YouTube.** yt-dlp's standalone build, so YouTube keeps working
+  after yt-dlp drops the cabinet's older Python (a one-time 40 MB download).
+- **Clearer YouTube messages**, 48 kHz playback, and a log file that's always
+  written (see *Sending a log*).
+
+## New in 2.4
 
 - **YouTube.** A new **YouTube** tile plays YouTube on the backglass: **Search
   YouTube**, or pick a music channel — **Lofi Girl** (its 24/7 live radios),
@@ -168,7 +181,7 @@ artists shows as **Various Artists**.
 - **online**, when the album has neither: Jukebox looks the artist and album up on
   Apple's iTunes Search and takes the cover only when the album name matches
   exactly. Found covers are kept in `external/jukebox-app/data/covers/`, never in
-  your music folders. To turn this off, add `covers = 0` to `/media/usb0/jukebox.cfg`.
+  your music folders. To turn this off: **Settings > Album covers online**.
 
 No art? A spinning record shows instead.
 
@@ -259,8 +272,9 @@ stream"), and if YouTube sends it slower than it plays, Now Playing says
 **One-time setup:** YouTube plays through
 [yt-dlp](https://github.com/yt-dlp/yt-dlp), a free, public-domain tool that
 isn't part of Jukebox. The first time you open YouTube, Jukebox asks, then
-downloads it from yt-dlp's GitHub releases (about 3 MB) into its `data` folder,
-and keeps it up to date weekly in the background. YouTube needs the internet.
+downloads yt-dlp's standalone build from its GitHub releases (about 40 MB, with
+its own Python) into its `data` folder, and keeps it up to date weekly in the
+background. YouTube needs the internet.
 
 Thumbnails are kept as a small cache (the 50 most recently played, a few MB);
 older ones are removed automatically.
@@ -330,18 +344,16 @@ still work for anyone who has one.
 ## Sending a log
 
 Something not working (a screen showing the wrong thing, a YouTube video or
-cover that won't load, the backglass not changing)? A log usually shows why:
+cover that won't load, the backglass not changing)? Jukebox always keeps a log,
+which usually shows why:
 
-1. On a computer, create a plain text file named `jukebox.cfg` at the **root of
-   the USB stick**, next to the `external` folder.
-2. Put this one line in it: `diag = 1`
-3. Plug the stick back in, open Jukebox and do whatever goes wrong.
-4. Close Jukebox and copy `jukebox-panels.log` from the root of the stick.
+1. Open Jukebox and do whatever goes wrong.
+2. Close Jukebox and copy `jukebox.log` from `external/jukebox-app/` on the USB
+   stick. (If you've opened Jukebox again since, the session before is in
+   `jukebox-previous.log`.)
 
 Then [open an issue](https://github.com/Bla1ze/atgames-juke-box/issues): say
-what you did and what you saw, and attach the log. While `diag` is on, Jukebox
-also labels each screen with which panel it is; delete `jukebox.cfg` (or set
-`diag = 0`) when you're done.
+what you did and what you saw, and attach the log.
 
 ---
 
@@ -351,7 +363,7 @@ also labels each screen with which panel it is; delete `jukebox.cfg` (or set
   release zip's `licenses` folder, with `CREDITS.txt`).
 - Images: **stb_image** by Sean Barrett (public domain).
 - YouTube: **[yt-dlp](https://github.com/yt-dlp/yt-dlp)** (public domain, Unlicense). It isn't
-  shipped with Jukebox: the app downloads it from yt-dlp's GitHub releases the first time you open
-  YouTube, after asking, and keeps it up to date weekly. Jukebox isn't affiliated with YouTube,
+  shipped with Jukebox: the app downloads its standalone build from yt-dlp's GitHub releases the
+  first time you open YouTube, after asking, and keeps it up to date weekly. Jukebox isn't affiliated with YouTube,
   Google, or the channels it lists; videos belong to their creators.
 - Display info: @n-i-x

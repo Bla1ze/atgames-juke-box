@@ -1,5 +1,30 @@
 # Changelog
 
+## 2.5 — 19 October 2026
+
+**Surround sound with the SSF kit, a Settings strip, and a sturdier YouTube.**
+
+- **Surround with the SSF kit.** If your cabinet has AtGames' SSF surround kit,
+  Jukebox now plays through it automatically. Without the kit, nothing changes:
+  stereo as before. Videos and files with real 5.1 sound play in 5.1; stereo
+  music is spread across the kit: the front speakers as before, the bass on the
+  sub/shaker, and a softer copy without the bass on the rear speakers.
+- **Settings.** A new **Settings** strip under the main menu tiles: Surround
+  sound (Auto, Off or On), Rear speakers (Off, Low or Medium) and Album covers
+  online (On or Off). When an update is available, Settings sits beside the
+  update banner.
+- **48 kHz playback.** Everything now plays at the cabinet's own rate.
+- **Future-proof YouTube.** Jukebox now uses yt-dlp's standalone build, so
+  YouTube keeps working after yt-dlp drops the cabinet's older Python. It's a
+  one-time 40 MB download, done in the background.
+- **Clearer YouTube messages.** Videos that aren't out yet now say "Not out yet:
+  premieres in 12 hours"; private and unavailable videos say so too, instead of
+  "This cabinet's Python is too old for yt-dlp".
+- **A log file, always.** Jukebox writes `jukebox.log` in its own folder (the
+  previous session is kept as `jukebox-previous.log`), so problems can be
+  reported without editing `jukebox.cfg`. It replaces `jukebox-panels.log` in the
+  stick's root, which can be deleted.
+
 ## 2.4.4 — 13 October 2026
 
 **Missing album covers are found online.** When a song has no cover in its
