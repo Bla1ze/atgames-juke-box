@@ -234,6 +234,13 @@ the drive's root, and holds files of the types above. A large library shows
 
 If you run a **Plex Media Server** with a Music library, Jukebox can play it.
 
+<p align="center">
+  <img src="screenshots/plex-source.png" width="200" alt="My Music: choose USB or Plex" />
+  <img src="screenshots/plex-link.png" width="200" alt="Link account: a code to enter at plex.tv/link" />
+  <img src="screenshots/plex-tracks.png" width="200" alt="An album's tracks from Plex" />
+  <img src="screenshots/plex-now-playing.png" width="200" alt="Now Playing a Plex track with its cover" />
+</p>
+
 1. Open **My Music** and choose **Plex**. The first time, the cabinet shows a
    short code.
 2. On your phone or computer, go to **plex.tv/link**, sign in to Plex and enter
