@@ -13,6 +13,8 @@
 - **Hold to scroll.** Hold Up or Down in a list: a short wait, a steady repeat,
   then faster after a second and a half, like Retro Launcher. A held direction
   stops at the top or bottom of a list; a single press still wraps around.
+- **What's new before you update.** Updating shows the release notes first, with
+  a Not now / Install choice. (It first appears on the update after this one.)
 - **Fixed:** after opening the YouTube screen, quitting Jukebox could end in a
   crash instead of a clean exit.
 
