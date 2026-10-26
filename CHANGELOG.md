@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.6 — 26 October 2026
+
+**Plex music, and hold a direction to scroll.**
+
+- **Plex.** Play your Plex Media Server's music. Under **My Music**, choose
+  **Plex** (or **USB** for the files on your stick). Link once with the code
+  from plex.tv/link on your phone (no typing); Jukebox finds your server and
+  remembers it. Browse by artist and album with covers; each track shows its
+  own artist. Albums play like local music (queue, next/previous, shuffle,
+  favorites). On your home network it connects straight to the server.
+- **Hold to scroll.** Hold Up or Down in a list: a short wait, a steady repeat,
+  then faster after a second and a half, like Retro Launcher. A held direction
+  stops at the top or bottom of a list; a single press still wraps around.
+- **Fixed:** after opening the YouTube screen, quitting Jukebox could end in a
+  crash instead of a clean exit.
+
 ## 2.5 — 19 October 2026
 
 **Surround sound with the SSF kit, a Settings strip, and a sturdier YouTube.**
