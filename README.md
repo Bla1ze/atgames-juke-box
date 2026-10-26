@@ -11,7 +11,7 @@
 
 A music and internet-radio player for AtGames devices. Browse thousands of online
 radio stations, search by name, save your favorites, play audio files from a
-USB drive, or play videos and YouTube on the backglass — with an album-tinted
+USB drive or from your **Plex** server, or play videos and YouTube on the backglass — with an album-tinted
 **Now Playing** screen, a spinning record for radio, and a live spectrum
 analyzer that dances to the music.
 
@@ -20,7 +20,22 @@ and AVI videos.
 
 ---
 
-## ✨ New in 2.5
+## ✨ New in 2.6
+
+- **Plex.** Play the music on your Plex Media Server. In **My Music**, choose
+  **Plex** (or **USB** for the files on your drive). Link once with a code from
+  plex.tv/link on your phone, no typing; Jukebox finds your server and remembers
+  it. Browse by artist and album with covers, each track shows its own artist,
+  and an album plays like local music. See *Playing music from Plex*.
+- **Hold to scroll.** Hold Up or Down in a list: a short wait, a steady repeat,
+  then faster after a second and a half, like Retro Launcher. A held direction
+  stops at the top or bottom of a list; a single press still wraps around.
+- **What's new before you update.** Updating shows the release notes first, with
+  a **Not now / Install** choice. (It first appears on the update after 2.6.)
+- **Fixed:** after opening the YouTube screen, quitting Jukebox could end in a
+  crash instead of a clean exit.
+
+## New in 2.5
 
 - **Surround with the SSF kit.** With AtGames' SSF surround kit, Jukebox plays
   in surround automatically: real 5.1 videos and files as 5.1, and stereo music
@@ -110,7 +125,7 @@ Open Jukebox and you land on the main menu:
 | **📻 Radio** | Browse curated categories — a **Featured** shortlist (WMMR 93.3 Philadelphia, Q104.3 Halifax), Popular, Top Voted, SomaFM, and genres like Rock, Jazz, Lo-fi, Ambient — streamed live from the online directory. |
 | **🔎 Search** | Type a station name on the on-screen keyboard to find it. |
 | **❤️ Favorites** | Your saved stations, kept between sessions. |
-| **📁 My Music** | Your own music from a USB drive, browsable by album and artist. |
+| **📁 My Music** | Your own music, browsable by album and artist: choose **USB** for the files on a drive, or **Plex** for your Plex server's music library. |
 | **🎬 Videos** | Video files from a USB drive, played on the backglass. |
 | **▶️ YouTube** | Search YouTube or pick a music channel; plays on the backglass. Needs yt-dlp (asked for the first time). |
 
@@ -212,6 +227,36 @@ already there are skipped. Videos go to the `videos` folder, everything else to
 Seeing *"No music found"*? Make sure the folder is named exactly `music`, sits at
 the drive's root, and holds files of the types above. A large library shows
 **"Scanning library…"** briefly on first open while tags are read.
+
+---
+
+## 🟧 Playing music from Plex
+
+If you run a **Plex Media Server** with a Music library, Jukebox can play it.
+
+1. Open **My Music** and choose **Plex**. The first time, the cabinet shows a
+   short code.
+2. On your phone or computer, go to **plex.tv/link**, sign in to Plex and enter
+   the code. There's no typing on the cabinet.
+3. Jukebox finds your server on its own and remembers the link, so this is a
+   one-time step. Next time, **Plex** opens straight to your library.
+4. Browse **artists**, then **albums**, then tracks (`Start` opens, `Back` goes up
+   a level). Pick an album or a track and it plays like local music: the queue
+   continues, `←/→` skip, covers show on **Now Playing** and each track shows its
+   own artist.
+
+Good to know:
+
+- Plex needs the cabinet to reach your server over the network, and it needs
+  internet once to link. A **Music** library has to exist on the server.
+- On your home network Jukebox connects straight to the server. If your server
+  runs in **Docker** (or advertises only an internal address), the cabinet can't
+  find its local address and goes out through the internet instead, which works
+  but can be slow or stutter. Fix it in Plex: **Settings → Network → Custom server
+  access URLs**, and add your server's local address, for example
+  `http://192.168.1.20:32400`.
+- The link is stored in `external/jukebox-app/data/plex.json`. Delete that file to
+  unlink.
 
 ---
 
@@ -318,20 +363,22 @@ still work for anyone who has one.
 | **Radio** | `Arrows` select · `Start` open / play · `Flipper` favorite · `Back` up a level |
 | **Search** | `Arrows` move · `Start` press key · `Back` to menu — then `Start` play, `Flipper` favorite on results |
 | **Favorites** | `Arrows` select · `Start` play · `Flipper` remove · `Back` to menu |
-| **My Music** | `Arrows` select · `Start` open a list / play a track / toggle Shuffle · `Back` up a level (or to menu at the top) |
+| **My Music** | `Arrows` select · `Start` open a list / play a track / toggle Shuffle · `Back` up a level (or to menu at the top). Plex works the same way; its first screen is the USB / Plex choice |
 | **Videos** | `Arrows` select · `Start` open a folder / play a video · `Back` up a folder (or to menu at the top) |
 | **YouTube** | `Arrows` select · `Start` open a channel / play a video (on the keyboard, press a key) · `Back` up a level (or to menu at the top) |
+| **Any list** | Hold `Up` or `Down` to scroll quickly: a short wait, a steady repeat, then faster. |
 | **Now Playing** | `←/→` previous / next · `Start` pause · `Flipper` shuffle (local) or favorite (radio) · `Back` to My Music's view list (if you started there) or the menu |
 
 ---
 
 ## Good to know
 
-- **Radio, Search and YouTube need an internet connection.** My Music and Videos
-  work offline.
+- **Radio, Search and YouTube need an internet connection.** My Music from a USB
+  drive and Videos work offline. Plex needs your server on the network.
 - **Updates:** Jukebox checks GitHub for a new version when it starts (quietly;
   offline is fine). A banner under the main menu tiles offers it; the update
-  replaces only `jukebox-app.elf` and then restarts Jukebox.
+  replaces only `jukebox-app.elf` and then restarts Jukebox. From 2.6 on, it
+  shows what changed (release notes, scrollable) before you choose **Install**.
 - Favorites are saved on the device and survive restarts — and carry over from
   1.x, so your saved stations are still there after upgrading.
 - Radio stations come and go — if one won't play, it may simply be offline; try

@@ -88,6 +88,7 @@ footer a { color: var(--dim); }
     <ul class="toc">
       <li><a href="#setup">Setting up</a></li>
       <li><a href="#wifi">Over Wi-Fi</a></li>
+      <li><a href="#plex">Plex</a></li>
       <li><a href="#formats">File types</a></li>
       <li><a href="#names">Names &amp; tags</a></li>
       <li><a href="#art">Album art</a></li>
@@ -107,7 +108,7 @@ footer a { color: var(--dim); }
       <li>On a computer, open the USB drive.</li>
       <li>Create a folder named <code>music</code> (all lowercase) at the drive's root, not inside another folder.</li>
       <li>Copy your music into it. Folders inside are scanned, so an <code>Artist/Album/track</code> layout works great.</li>
-      <li>Eject the drive, plug it into the cabinet, start Jukebox and open <b>My Music</b>.</li>
+      <li>Eject the drive, plug it into the cabinet, start Jukebox, open <b>My Music</b> and choose <b>USB</b>.</li>
     </ol>
     <pre><code>USB DRIVE (root)
 └── music/
@@ -136,6 +137,19 @@ footer a { color: var(--dim); }
       <li>Files already on the drive are skipped.</li>
       <li>It only runs while that screen is open, with a new PIN each time. Use the port the cabinet shows (8080 is sometimes taken).</li>
       <li>The music keeps playing while you send.</li>
+    </ul>
+
+    <h2 id="plex"><span>Plex</span></h2>
+    <p>Prefer to keep your music on a Plex Media Server? In <b>My Music</b>, choose <b>Plex</b> instead of <b>USB</b>.</p>
+    <ol class="steps">
+      <li>The first time, the cabinet shows a short code. On your phone or computer, go to <b>plex.tv/link</b>, sign in and enter it. There is no typing on the cabinet.</li>
+      <li>Jukebox finds your server and remembers the link. Next time, Plex opens straight to your library.</li>
+      <li>Browse artists, then albums. Pick an album or a track and it plays like local music, with covers and each track&#39;s own artist.</li>
+    </ol>
+    <ul>
+      <li>You need a <b>Music</b> library on the server, and the cabinet has to reach it over the network.</li>
+      <li>If your server runs in Docker, add its local address in Plex under <b>Settings &rarr; Network &rarr; Custom server access URLs</b>, so Jukebox connects directly instead of going out through the internet.</li>
+      <li>To unlink, delete <code>plex.json</code> from <code>external/jukebox-app/data/</code>.</li>
     </ul>
 
     <h2 id="formats">File <span>types</span></h2>
