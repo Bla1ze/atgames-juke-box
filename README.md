@@ -420,4 +420,4 @@ what you did and what you saw, and attach the log.
   shipped with Jukebox: the app downloads its standalone build from yt-dlp's GitHub releases the
   first time you open YouTube, after asking, and keeps it up to date weekly. Jukebox isn't affiliated with YouTube,
   Google, or the channels it lists; videos belong to their creators.
-- Display info: @n-i-x
+- Display info: [@n-i-x](https://github.com/n-i-x)
