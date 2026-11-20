@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.7.1 — 20 November 2026
+
+**Plex albums play all the way through again.**
+
+- **Fixed:** with Plex, after the first song the next ones played only a few
+  seconds before skipping ahead. Every track now plays to the end. Plex still
+  shows Jukebox under Now Playing and counts your plays.
+- **Fixed:** skipping songs left old work running in the background, a little
+  more with every skip. Skips now clean up after themselves.
+
 ## 2.7 — 20 November 2026
 
 **Plex sees what you play, and song titles with accents or curly quotes display properly.**

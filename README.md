@@ -20,7 +20,14 @@ and AVI videos.
 
 ---
 
-## ✨ New in 2.7
+## ✨ New in 2.7.1
+
+- **Fixed:** with Plex, after the first song the next ones played only a few
+  seconds. Every track now plays to the end.
+- **Fixed:** skipping songs left old work running in the background. Skips now
+  clean up after themselves.
+
+## New in 2.7
 
 - **Plex Now Playing and history.** While a Plex track plays, your server shows
   "Jukebox" under Now Playing with the song and its progress. A track you hear
