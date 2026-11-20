@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.7 — 20 November 2026
+
+**Plex sees what you play, and song titles with accents or curly quotes display properly.**
+
+- **Plex Now Playing and history.** While a Plex track plays, your server shows
+  "Jukebox" under Now Playing, with the song, its progress and when it's
+  paused. A track you hear to the end, or nearly, counts as played, so it shows
+  in your Plex history and play counts. USB music, radio and YouTube aren't
+  reported.
+- **Fixed:** titles with curly apostrophes or quotes, or accented letters, came
+  out garbled on the backglass ("I'll" became "IÂ" and boxes). They now show as
+  written, and the main screen drops the accent instead of showing boxes.
+- **Multi-disc albums from USB** play in disc order when the files have a disc
+  number tag, instead of mixing the two discs' tracks.
+
 ## 2.6 — 26 October 2026
 
 **Plex music, and hold a direction to scroll.**

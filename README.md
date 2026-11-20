@@ -20,7 +20,17 @@ and AVI videos.
 
 ---
 
-## ✨ New in 2.6
+## ✨ New in 2.7
+
+- **Plex Now Playing and history.** While a Plex track plays, your server shows
+  "Jukebox" under Now Playing with the song and its progress. A track you hear
+  to the end, or nearly, counts as played in your Plex history and play counts.
+- **Fixed:** titles with curly apostrophes or quotes, or accented letters, came
+  out garbled on the backglass. They now show as written.
+- **Multi-disc albums from USB** play in disc order when the files have a disc
+  number tag.
+
+## New in 2.6
 
 - **Plex.** Play the music on your Plex Media Server. In **My Music**, choose
   **Plex** (or **USB** for the files on your drive). Link once with a code from
