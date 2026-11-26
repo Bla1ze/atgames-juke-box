@@ -20,7 +20,20 @@ and AVI videos.
 
 ---
 
-## ✨ New in 2.7.1
+## ✨ New in 2.8
+
+- **One search for everything.** Search looks through your USB music, Plex,
+  radio and YouTube at once. Each result shows where it was found, and
+  Left/Right jump between sources. Open an artist or album, then Back returns
+  to your results.
+- **Plex search.** Plex has its own Search at the top of Libraries.
+- **A–Z strip.** Long artist and album lists in My Music and Plex get a letter
+  strip down the right edge. Press Left/Right to jump a letter.
+- **Fixed:** offline, Search and Radio now say "Couldn't connect" instead of
+  showing no results, and they try a backup station server if the main one is
+  down.
+
+## New in 2.7.1
 
 - **Fixed:** with Plex, after the first song the next ones played only a few
   seconds. Every track now plays to the end.
@@ -140,7 +153,7 @@ Open Jukebox and you land on the main menu:
 | --- | --- |
 | **🎵 Now Playing** (top card) | What's playing, with its album art. Open it for the full Now Playing screen. |
 | **📻 Radio** | Browse curated categories — a **Featured** shortlist (WMMR 93.3 Philadelphia, Q104.3 Halifax), Popular, Top Voted, SomaFM, and genres like Rock, Jazz, Lo-fi, Ambient — streamed live from the online directory. |
-| **🔎 Search** | Type a station name on the on-screen keyboard to find it. |
+| **🔎 Search** | One search across your USB music, Plex, radio stations and YouTube. Each result shows where it was found. |
 | **❤️ Favorites** | Your saved stations, kept between sessions. |
 | **📁 My Music** | Your own music, browsable by album and artist: choose **USB** for the files on a drive, or **Plex** for your Plex server's music library. |
 | **🎬 Videos** | Video files from a USB drive, played on the backglass. |
@@ -385,9 +398,9 @@ still work for anyone who has one.
 | --- | --- |
 | **Menu** | `Arrows` move between the Now Playing card and the tiles · `Start` open · `Back` exit |
 | **Radio** | `Arrows` select · `Start` open / play · `Flipper` favorite · `Back` up a level |
-| **Search** | `Arrows` move · `Start` press key · `Back` to menu — then `Start` play, `Flipper` favorite on results |
+| **Search** | `Arrows` move · `Start` press key · `Back` to menu — then on results `Left/Right` jump between sources · `Start` play, or open an artist or album · `Flipper` favorite a station · `Back` edit the search |
 | **Favorites** | `Arrows` select · `Start` play · `Flipper` remove · `Back` to menu |
-| **My Music** | `Arrows` select · `Start` open a list / play a track / toggle Shuffle · `Back` up a level (or to menu at the top). Plex works the same way; its first screen is the USB / Plex choice |
+| **My Music** | `Arrows` select · `Left/Right` jump a letter on long artist and album lists · `Start` open a list / play a track / toggle Shuffle · `Back` up a level (or to menu at the top). Plex works the same way, with a Search row at the top of Libraries; its first screen is the USB / Plex choice |
 | **Videos** | `Arrows` select · `Start` open a folder / play a video · `Back` up a folder (or to menu at the top) |
 | **YouTube** | `Arrows` select · `Start` open a channel / play a video (on the keyboard, press a key) · `Back` up a level (or to menu at the top) |
 | **Any list** | Hold `Up` or `Down` to scroll quickly: a short wait, a steady repeat, then faster. |
@@ -397,8 +410,9 @@ still work for anyone who has one.
 
 ## Good to know
 
-- **Radio, Search and YouTube need an internet connection.** My Music from a USB
-  drive and Videos work offline. Plex needs your server on the network.
+- **Radio and YouTube need an internet connection.** My Music from a USB drive
+  and Videos work offline. Plex needs your server on the network. Search finds
+  your USB music offline and the rest when the cabinet is online.
 - **Updates:** Jukebox checks GitHub for a new version when it starts (quietly;
   offline is fine). A banner under the main menu tiles offers it; the update
   replaces only `jukebox-app.elf` and then restarts Jukebox. From 2.6 on, it

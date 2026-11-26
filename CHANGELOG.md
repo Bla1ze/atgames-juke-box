@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.8 — 26 November 2026
+
+**One search for everything, and A–Z jumps in long lists.**
+
+- **New:** Search looks through your USB music, Plex, radio and YouTube at
+  once. Each result shows where it was found, and Left/Right jump between
+  sources.
+- **New:** Plex has its own Search at the top of Libraries.
+- **New:** long artist and album lists in My Music and Plex get an A–Z strip.
+  Press Left/Right to jump a letter.
+- **Fixed:** when the cabinet is offline, Search and Radio now say "Couldn't
+  connect" instead of showing no results, and they try a backup station server
+  if the main one is down.
+
 ## 2.7.1 — 20 November 2026
 
 **Plex albums play all the way through again.**

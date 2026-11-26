@@ -165,7 +165,7 @@ footer a { color: var(--dim); }
     <p class="intro">An External Application for the cabinet: copy it to a USB stick and it shows up in the cabinet's own menu. No firmware changes, no root.</p>
     <div class="cards">
       <div class="card"><span class="ico">📻</span><h3>Internet radio</h3><p>Curated categories &ndash; Featured, Popular, Top Voted, SomaFM, and genres like Rock, Jazz, Lo-fi and Ambient &ndash; streamed live.</p></div>
-      <div class="card"><span class="ico">🔎</span><h3>Search</h3><p>Find any station by name with the on-screen keyboard.</p></div>
+      <div class="card"><span class="ico">🔎</span><h3>Search</h3><p>One search across your USB music, Plex, radio and YouTube. Each result shows where it was found. New in 2.8.</p></div>
       <div class="card"><span class="ico">❤️</span><h3>Favorites</h3><p>Save stations with a flipper. They're kept between sessions and carry over between versions.</p></div>
       <div class="card"><span class="ico">📁</span><h3>Your own music</h3><p>A <code>music</code> folder on the USB drive becomes a library by album and artist, with shuffle and auto-advance.</p></div>
       <div class="card"><span class="ico">🟧</span><h3>Plex music</h3><p>Play your Plex Media Server's music library. Link once with a code at plex.tv/link on your phone &ndash; no typing &ndash; then browse by artist and album with covers. What you play shows in Plex&rsquo;s Now Playing and history.</p></div>
@@ -218,9 +218,9 @@ footer a { color: var(--dim); }
       <tr><th>Screen</th><th>Buttons</th></tr>
       <tr><td>Menu</td><td><kbd>Arrows</kbd> move &middot; <kbd>Start</kbd> open &middot; <kbd>Back</kbd> exit</td></tr>
       <tr><td>Radio</td><td><kbd>Arrows</kbd> select &middot; <kbd>Start</kbd> open / play &middot; <kbd>Flipper</kbd> favorite &middot; <kbd>Back</kbd> up a level</td></tr>
-      <tr><td>Search</td><td><kbd>Arrows</kbd> move &middot; <kbd>Start</kbd> press key &middot; then <kbd>Start</kbd> play, <kbd>Flipper</kbd> favorite on results</td></tr>
+      <tr><td>Search</td><td><kbd>Arrows</kbd> move &middot; <kbd>Start</kbd> press key &middot; then <kbd>&larr;/&rarr;</kbd> jump between sources, <kbd>Start</kbd> play or open, <kbd>Flipper</kbd> favorite a station</td></tr>
       <tr><td>Favorites</td><td><kbd>Arrows</kbd> select &middot; <kbd>Start</kbd> play &middot; <kbd>Flipper</kbd> remove &middot; <kbd>Back</kbd> to menu</td></tr>
-      <tr><td>My Music</td><td><kbd>Arrows</kbd> select &middot; <kbd>Start</kbd> open / play / toggle Shuffle &middot; <kbd>Back</kbd> up a level</td></tr>
+      <tr><td>My Music</td><td><kbd>Arrows</kbd> select &middot; <kbd>&larr;/&rarr;</kbd> jump a letter on long lists &middot; <kbd>Start</kbd> open / play / toggle Shuffle &middot; <kbd>Back</kbd> up a level</td></tr>
       <tr><td>Videos</td><td><kbd>Arrows</kbd> select &middot; <kbd>Start</kbd> open a folder / play &middot; <kbd>Back</kbd> up a folder</td></tr>
       <tr><td>YouTube</td><td><kbd>Arrows</kbd> select &middot; <kbd>Start</kbd> open a channel / play &middot; <kbd>Back</kbd> up a level</td></tr>
       <tr><td>Now Playing</td><td><kbd>&larr;/&rarr;</kbd> previous / next &middot; <kbd>Start</kbd> pause &middot; <kbd>Flipper</kbd> shuffle (your music) or favorite (radio) &middot; <kbd>Back</kbd> back</td></tr>
@@ -235,7 +235,7 @@ footer a { color: var(--dim); }
       <li><b>Download</b> <code>jukebox-app.zip</code> from the <a href="https://github.com/Bla1ze/atgames-juke-box/releases/latest">latest release</a>.</li>
       <li><b>Unzip it</b> into a folder named <code>jukebox-app</code> inside the <code>external</code> folder on your cabinet's USB stick: <code>external/jukebox-app/</code>. From 2.2 on, Jukebox updates itself; for older versions, replace the old files. Your favorites carry over.</li>
       <li><b>Start</b> Jukebox from the cabinet's External Applications menu.</li>
-      <li>For your own music, add a <code>music</code> folder at the root of the USB drive (see above). Radio and Search need the cabinet online.</li>
+      <li>For your own music, add a <code>music</code> folder at the root of the USB drive (see above). Radio and YouTube need the cabinet online.</li>
     </ol>
   </div>
 </section>
@@ -246,7 +246,7 @@ footer a { color: var(--dim); }
     <p class="intro">The basics. The <a href="https://github.com/Bla1ze/atgames-juke-box#readme">README</a> has the full details.</p>
     <details open><summary>Which cabinets does it work on?</summary><div class="a"><p>AtGames Legends Pinball <b>4KP</b> and <b>HDP</b>. Jukebox reads the cabinet model to put the menu, the backglass art and the DMD marquee on the right screens.</p></div></details>
     <details><summary>Will this work on the same drive as Visual Pinball X (VPXS)?</summary><div class="a"><p>Yes. Jukebox keeps its own files (settings, log and downloaded tools) in its own app folder, so it can share a drive with your VPX tables.</p></div></details>
-    <details><summary>Does it need the internet?</summary><div class="a"><p>Radio, Search and YouTube do. <b>My Music</b> from a USB drive and <b>Videos</b> work offline. <b>Plex</b> needs your Plex server on the network (and the internet once, to link).</p></div></details>
+    <details><summary>Does it need the internet?</summary><div class="a"><p>Radio and YouTube do. <b>My Music</b> from a USB drive and <b>Videos</b> work offline, and Search still finds your USB music. <b>Plex</b> needs your Plex server on the network (and the internet once, to link).</p></div></details>
     <details><summary>Do I need the Arcade Control Panel?</summary><div class="a"><p>No. Everything works with the cabinet&#39;s own buttons; a flipper saves favorites. <code>Y</code> and <code>X</code> still work if you have a panel.</p></div></details>
     <details><summary>It says "No music found".</summary><div class="a"><p>Check that the folder is named exactly <code>music</code> (lowercase), sits at the root of the USB drive, and holds files of a supported type: MP3, M4A/AAC, FLAC, OGG, Opus, WAV or WMA. A large library shows "Scanning library&hellip;" briefly the first time. More in the <a href="your-music.html#trouble">Your music guide</a>.</p></div></details>
     <details><summary>My album art doesn&#39;t show.</summary><div class="a"><p>Put a <code>cover.jpg</code> (or <code>folder</code> / <code>front</code>, .jpg or .png) in the album&#39;s folder. Pictures embedded in MP3, FLAC and M4A files are read too, and when there's neither, Jukebox looks the album up online (the cabinet needs Wi-Fi). For an album the lookup can't find, a <code>cover.jpg</code> is the way.</p></div></details>
